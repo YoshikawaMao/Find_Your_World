@@ -1,24 +1,57 @@
-# README
+# Find Your World
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+アニメのオススメポイントを見たり、投稿することができるサイトです。
+また、作品の出演声優を知れたり、声優ごとに出演作品も見られるようになっております。
+アニメが好きな方にはアニメのオススメポイントを投稿することで推しアニメを盛り上げて頂き、また、アニメを見てみたいけど何を見たらいいか分からないという方には、オススメポイントを見て見たいと思うアニメに出会う場として活用して頂きたいです。
 
-Things you may want to cover:
+### サイトテーマ
+アニメのおすすめポイント投稿サイト
 
-* Ruby version
+### テーマを選んだ理由
+コロナ禍により自宅に居る時間が増えた人が多いことや、サブスクリプションでアニメを見やすい環境が整ったことから、アニメに対する需要が高まってきていると感じます。
+実際に、私の周りでもあまりアニメを見ていなかった友人や知り合いに、「おすすめアニメを教えて欲しい」「この声優さんが出ているアニメを教えて」と言われることが増えました。
+このことから世の中の多くの人がアニメを見てみたいと思っているが、何を見たら良いのか悩んでいるのではないかと考え、その人たちにアニメ好きからオススメポイントを伝えられれば、最近アニメを見始めた人にとってはアニメを選ぶ参考になるのではないか、また、アニメ好きにとってもアニメの良いところを共有できる。
+という想いからこのテーマを選びました。
 
-* System dependencies
+### ターゲットユーザ
+投稿者側
+- アニメが好きな人
+- 推しアニメの好きなところを沢山の人に知ってもらいたい、共有したいと思っている人
 
-* Configuration
+閲覧者側
+- これからアニメを見てみようと思っている人
+- 何をみたらいいか悩んでいる人
 
-* Database creation
+### 主な利用シーン
+投稿者側
+- 好きなアニメをもっと沢山の人に知って貰いたい時
+- アニメの良いところを共有したい時
 
-* Database initialization
+閲覧者側
+- アニメを見たいけど何を見たら良いか悩んでいる時
+- 見たいアニメが決まっていない時
 
-* How to run the test suite
+## 設計書
+ER図・遷移図
+https://drive.google.com/file/d/1RC5Cawd7KEZxL-R3xXLoOZza1Ah2mGow/view?usp=sharing
 
-* Services (job queues, cache servers, search engines, etc.)
+テーブル提議書
+https://docs.google.com/spreadsheets/d/1_z_BxtSJAIWwEc95fF6nWlTw8XWjfhhovEwaqHwMMLc/edit?usp=sharing
 
-* Deployment instructions
+アプリケーション詳細設計
+https://docs.google.com/spreadsheets/d/1vdzfdNMN1N5NN2ofO49KgnAI9YHCM7RyM3vvxFyyliM/edit?usp=sharing
 
-* ...
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1o6KYcX9ZHEsRD9DTR2hdz02vBWclHHXMnvdrNKQQ2BE/edit?usp=sharing
+
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+
+## 注意点
+著作権の問題から画像の掲載アップロードは出来ない仕様となっております。
+ご理解ご協力のほど何卒よろしくお願いいたします。
