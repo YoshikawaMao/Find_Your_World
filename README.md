@@ -33,13 +33,13 @@
 - 見たいアニメが決まっていない時
 
 ## 設計書
-ER図・遷移図
+ER図・遷移図.
 https://drive.google.com/file/d/1RC5Cawd7KEZxL-R3xXLoOZza1Ah2mGow/view?usp=sharing
 
-テーブル提議書
+テーブル提議書.
 https://docs.google.com/spreadsheets/d/1_z_BxtSJAIWwEc95fF6nWlTw8XWjfhhovEwaqHwMMLc/edit?usp=sharing
 
-アプリケーション詳細設計
+アプリケーション詳細設計.
 https://docs.google.com/spreadsheets/d/1vdzfdNMN1N5NN2ofO49KgnAI9YHCM7RyM3vvxFyyliM/edit?usp=sharing
 
 ## チャレンジ要素一覧
