@@ -1,0 +1,2 @@
+class AnimeVoice < ApplicationRecord
+end
