@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users
+
+ root to: 'homes#top'
+ get "top" => "homes#top"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: 'homes#top'
-  get "top" => "homes#top"
+  # 管理者側
+  # devise_for :admins
+  devise_for :admins, controllers: {
+    sessions: 'admins/sessions',
+    registrations: 'admins/registrations'
+  }
 
   namespace :admin do
     resources :animes
@@ -14,6 +19,13 @@ Rails.application.routes.draw do
     resources :genres
   end
 
+  # 利用者側
+  # devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+
   namespace :user do
     resources :animes
     resources :comments
@@ -21,6 +33,4 @@ Rails.application.routes.draw do
     resources :voices
     resources :messages
   end
-
-
 end
