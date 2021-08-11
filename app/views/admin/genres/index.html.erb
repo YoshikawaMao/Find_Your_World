@@ -15,7 +15,7 @@
           <% @genres.each do |genre| %>
             <tr>
               <td>
-                <%= link_to genre.name %>
+                <%= link_to genre.name, admin_animes_genre_path(genre_id: genre.id) %>
                 <!--genreに紐づいているアニメ一覧に飛ばしたい-->
               </td>
               <td>

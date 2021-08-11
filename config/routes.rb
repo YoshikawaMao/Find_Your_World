@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     resources :genres
   end
 
+  get 'admins/animes/:genre_id' => 'admin/animes#index', as: :admin_animes_genre
+
   # 利用者側
   # devise_for :users
   devise_for :users, controllers: {

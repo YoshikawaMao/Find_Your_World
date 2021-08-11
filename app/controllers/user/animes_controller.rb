@@ -10,7 +10,13 @@ class User::AnimesController < ApplicationController
   end
 
   def create
-
+    @anime = Anime.new(anime_paramus)
+    if @anime.save
+       redirect_to user_animes_path
+    else
+      @animes = Anime.all
+      render :index
+    end
   end
 
   private
