@@ -32,5 +32,6 @@ Rails.application.routes.draw do
     resources :favorites
     resources :voices
     resources :messages
+    resources :genres
   end
 end
