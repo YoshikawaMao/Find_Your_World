@@ -2,18 +2,9 @@
     <div class="row">
       <div class="col-4">
 
-        <!--<div class="col-2 off-set-1">-->
-       <ul class="list-group">
-       <li class="list-group-item"><strong>ジャンル検索</strong></li>
-        <% @genres.each do |genre| %>
-        <li class="list-group-item"><%= link_to genre.name, search_path('search[value]': genre.id) %></li>
-        <% end %>
-       </ul>
-       <!--</div>-->
-
-        <%= form_with model:@anime, url:admin_genres_path, local:true do |f| %>
-          <h6>おすすめアニメタイトル</h6>
-          <%= f.text_field :name, :size=>"30×5" %>
+        <%= form_with model:@anime, url:admin_animes_path, local:true do |f| %>
+          <h6>アニメURL</h6>
+          <%= f.text_field :anime_url, :size=>"30×5" %>
 
           <div class="actions">
             <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>

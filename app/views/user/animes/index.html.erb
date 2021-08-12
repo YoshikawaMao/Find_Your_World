@@ -1,15 +1,31 @@
 <div class="container">
     <div class="row">
-      <%= @animes.genre.name %>
       <div class="col-4">
-        <%= form_with model:@anime, url:admin_genres_path, local:true do |f| %>
-          <h6>おすすめアニメタイトル</h6>
-          <%= f.text_field :name, :size=>"30×5" %>
-
+        <%= form_with model:@anime, url:user_animes_path, local:true do |f| %>
+          <%= f.label :"おすすめのアニメタイトル", class: "mr-5" %></th>
+          <div class="form-group">
+            <%= f.text_field :name, :size=>"30×5" %>
+          </div>
+          <%= f.label :"ジャンル", class: "mr-5" %>
+          <div class="form-group">
+            <%= f.collection_select :genre_id, Genre.all, :id, :name, {prompt: "選択してください"}%>
+          </div>
           <div class="actions">
             <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
           </div>
         <% end %>
+        <!--serch機能作ったらここに記入-->
+        <!--<div class="col-2 off-set-1">-->
+        <ul class="list-group mt-5">
+          <li class="list-group-item"><strong>ジャンル検索</strong></li>
+          <% @genres.each do |genre| %>
+            <li class="list-group-item">
+              <%= genre.name %>
+              <!--<%#= link_to genre.name, search_path('search[value]': genre.id) %>-->
+              </li>
+          <% end %>
+        </ul>
+        <!--</div>-->
       </div>
       <div class="col-8">
         <table>

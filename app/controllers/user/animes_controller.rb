@@ -1,16 +1,18 @@
 class User::AnimesController < ApplicationController
 
   def index
-    @animes = Anime.all
+    @animes = Anime.all.page(params[:page]).per(15)
     @anime = Anime.new
+    @genres = Genre.all
   end
 
   def show
-    @anime = Anime.find(paramus[:id])
+    @anime = Anime.find(params[:id])
   end
 
+  #アニメのタイトル
   def create
-    @anime = Anime.new(anime_paramus)
+    @anime = Anime.new(anime_params)
     if @anime.save
        redirect_to user_animes_path
     else
