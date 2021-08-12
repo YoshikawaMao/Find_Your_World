@@ -4622,3 +4622,871 @@ Processing by Admins::SessionsController#new as HTML
 Completed 200 OK in 104ms (Views: 103.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-12 09:15:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 5467ms (Views: 5450.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 09:15:34 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+Started GET "/" for 60.112.30.198 at 2021-08-12 09:15:34 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 189ms (Views: 188.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 216ms (Views: 215.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 09:15:36 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 113ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 09:15:37 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 131ms (Views: 130.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 09:15:39 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-12 09:15:42 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 136ms (Views: 126.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-12 09:15:49 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LyNmRK6R6xLiwK35yJM35VYTPlb9abx/DnhZvKmyWu9DfmOk0k0kxK6WPktPEJvH+cK8qmKXItj10Ouyegjh8g==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (uninitialized constant ApplicationController::Customer):
+  
+app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-12 09:16:40 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 127ms (Views: 118.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-12 09:16:50 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FoddCDSbzGvEKDVNlg2HCR4Con9++YdgAQDvmXpC19vsb+kqxum+J3CH6plrf9Fp9f/arfW62u5z6D4k+gMI2w==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 312ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 09:16:51 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:21
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Anime Load (0.0ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Anime Load (0.0ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Anime Load (0.0ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered user/animes/index.html.erb within layouts/application (170.8ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `search_path' for #<#<Class:0x00007f59385a9310>:0x00007f59385df870>
+Did you mean?  search_field_tag):
+    20:           <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    21:           <% @genres.each do |genre| %>
+    22:             <li class="list-group-item">
+    23:               <%= link_to genre.name, search_path('search[value]': genre.id) %>
+    24:             </li>
+    25:           <% end %>
+    26:         </ul>
+  
+app/views/user/animes/index.html.erb:23:in `block in _app_views_user_animes_index_html_erb__136705355712179435_70010587125300'
+app/views/user/animes/index.html.erb:21:in `_app_views_user_animes_index_html_erb__136705355712179435_70010587125300'
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 09:33:51 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:21
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:31
+  Rendered user/animes/index.html.erb within layouts/application (19.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 777ms (Views: 756.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-12 09:33:57 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `search_for' for #<Class:0x00000000051c06b0>):
+  
+app/controllers/user/searches_controller.rb:6:in `search'
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 09:34:10 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:21
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:31
+  Rendered user/animes/index.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 141ms (Views: 139.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 09:35:22 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iT+cvQ6BZ0I8Lh+PTkabLXojRcePuScQ+QRIg3fMjOW9QniywBi535qoln0noNcAAJMtGZnJMEoSQla/8zKoPQ==", "anime"=>{"name"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18:         <!--<div class="col-2 off-set-1">-->
+    19:         <ul class="list-group mt-5">
+    20:           <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    21:           <% @genres.each do |genre| %>
+    22:             <li class="list-group-item">
+    23:               <%= link_to genre.name, user_search_path('search[value]': genre.id) %>
+    24:             </li>
+  
+app/views/user/animes/index.html.erb:21:in `_app_views_user_animes_index_html_erb___245153556367979305_69928464539240'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 09:42:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 721ms (Views: 700.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 09:42:36 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhI8d4gI0iu/MHYHCPqc2CElLLAhrnPfZ34Hxqhh5flqb9h4RpEMthm2//VhHND1W5VEbjfeZIWMOBn6LJ/BIQ==", "anime"=>{"name"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/_genrelist.html.erb (1.8ms)
+  Rendered user/animes/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul class="list-group mt-5">
+    2:     <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    3:     <% @genres.each do |genre| %>
+    4:       <li class="list-group-item">
+    5:         <%= link_to genre.name, user_search_path('search[value]': genre.id) %>
+    6:       </li>
+  
+app/views/user/animes/_genrelist.html.erb:3:in `_app_views_user_animes__genrelist_html_erb___2895762691213226808_69929920034480'
+app/views/user/animes/index.html.erb:18:in `_app_views_user_animes_index_html_erb___3540876284636404631_69929919952100'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:09:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 697ms (Views: 690.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:09:57 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 155ms (Views: 153.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:10:03 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.9ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (20.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 183ms (Views: 167.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 10:10:08 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dvDhhqdrqof9R5qF907K0kgpyd+Mtf50WhCceXXL00u1CyzmjE+uBZx8blc5X7KxsXtzpiiB3p76kcuA283G+w==", "anime"=>{"name"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/_genrelist.html.erb (1.9ms)
+  Rendered user/animes/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul class="list-group mt-5">
+    2:     <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    3:     <% @genres.each do |genre| %>
+    4:       <li class="list-group-item">
+    5:         <%= link_to genre.name, user_search_path('search[value]': genre.id) %>
+    6:       </li>
+  
+app/views/user/animes/_genrelist.html.erb:3:in `_app_views_user_animes__genrelist_html_erb___2625670823280129240_70175706244440'
+app/views/user/animes/index.html.erb:18:in `_app_views_user_animes_index_html_erb__3303154051540572290_70175706153680'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:10:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 119ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:10:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 121ms (Views: 120.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:24:50 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.7ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 163ms (Views: 143.5ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 10:24:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZXQXVU1IG/BTxR3SPR73CvBfF0pTAdQm7l2Dc1pzH6d6DRSm6z+8mfJnYUhEjfxUXEUgz88EApw/2gxSZfopg==", "anime"=>{"name"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/_genrelist.html.erb (1.4ms)
+  Rendered user/animes/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul class="list-group mt-5">
+    2:     <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    3:     <% @genres.each do |genre| %>
+    4:       <li class="list-group-item">
+    5:         <%= link_to genre.name, user_search_path('search[value]': genre.id) %>
+    6:       </li>
+  
+app/views/user/animes/_genrelist.html.erb:3:in `_app_views_user_animes__genrelist_html_erb___2625670823280129240_70175642040860'
+app/views/user/animes/index.html.erb:18:in `_app_views_user_animes_index_html_erb__3303154051540572290_70175641968200'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:28:07 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#index as HTML
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" ORDER BY "genres"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (byebug):1
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 155296ms (Views: 720.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:30:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 134ms (Views: 133.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:31:20 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (19.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 227ms (Views: 202.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:33:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:4
+  Rendered user/animes/_genrelist.html.erb (20765.4ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (20781.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 21510ms (Views: 21485.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:34:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:4
+  Rendered user/animes/_genrelist.html.erb (8376.5ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (8383.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 8515ms (Views: 8513.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 10:34:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mgi7r1wlvPpmqO8CeKdrLykd8ib1/g98CiGq15jtn7cGdV+gkrxiZ8AuZvARQScCU62a+OOOGCbhZ7TrHBO7bw==", "anime"=>{"name"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/_genrelist.html.erb (405060.1ms)
+  Rendered user/animes/index.html.erb within layouts/application (405066.3ms)
+Completed 500 Internal Server Error in 405082ms (ActiveRecord: 0.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `_app_views_user_animes__genrelist_html_erb___537478695246203302_70088834055980'
+app/views/user/animes/_genrelist.html.erb:4:in `_app_views_user_animes__genrelist_html_erb___537478695246203302_70088834055980'
+app/views/user/animes/index.html.erb:18:in `_app_views_user_animes_index_html_erb__2445468865865863000_70088833973420'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:41:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 747ms (Views: 740.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:41:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 185ms (Views: 183.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:41:58 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (26.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 162ms (Views: 140.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 10:42:03 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3AOuEaA/0QRjyoe/9zF6Yg8N4BwT5edVcNtYlHeRtt8f+GNxixvVhgLxc205IAIB9l9aZbfRx7/QWg9t2Zejbw==", "anime"=>{"name"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/_genrelist.html.erb (1.9ms)
+  Rendered user/animes/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul class="list-group mt-5">
+    2:     <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    3:     <% @genres.each do |genre| %>
+    4:       <li class="list-group-item">
+    5:         <%= link_to genre.name, user_search_path('search[value]': genre.id) %>
+    6:       </li>
+  
+app/views/user/animes/_genrelist.html.erb:3:in `_app_views_user_animes__genrelist_html_erb__2017197559386021017_70112422635180'
+app/views/user/animes/index.html.erb:18:in `_app_views_user_animes_index_html_erb___4465167568153574399_70112422544360'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:42:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 118ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 10:42:19 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:46:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.5ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 179ms (Views: 160.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 10:47:29 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"burTIAgk0k+kN0kHxs54zZxfQvqglB8n3NIEci6GJKNalzcvxr0M0gKxwPWvKDTg5u8qJLbkCH03lBpOqngAew==", "anime"=>{"title"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  Rendered user/animes/_genrelist.html.erb (1.5ms)
+  Rendered user/animes/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul class="list-group mt-5">
+    2:     <li class="list-group-item"><strong>ジャンル検索</strong></li>
+    3:     <% @genres.each do |genre| %>
+    4:       <li class="list-group-item">
+    5:         <%= link_to genre.name, user_search_path('search[value]': genre.id) %>
+    6:       </li>
+  
+app/views/user/animes/_genrelist.html.erb:3:in `_app_views_user_animes__genrelist_html_erb__2017197559386021017_70112291256720'
+app/views/user/animes/index.html.erb:18:in `_app_views_user_animes_index_html_erb___4465167568153574399_70112291153700'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 10:49:10 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (16.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 159ms (Views: 144.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 10:49:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IELeto8qHhgJw/dW7T6sTDjzOBr0wk1TX4Zze+9ecZ0UPzq5QbPAha9FfqSE2OBhQkNQxOKyWgm0wG1Ha6BVRQ==", "anime"=>{"title"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+Completed 500 Internal Server Error in 287093ms (ActiveRecord: 0.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/user/animes_controller.rb:20:in `create'
+Started GET "/" for 60.112.30.198 at 2021-08-12 11:04:10 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 714ms (Views: 707.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 11:04:14 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 132ms (Views: 130.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:04:16 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 158ms (Views: 139.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 11:04:22 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mWM+FPQHdh3HnviHX1qvgZkwx+oyYEE4mttvy5JItEhamPN03yNyn6alDFWRS9fiYGJ9k5ZUYdI6WjgyPE6h+A==", "anime"=>{"title"=>"鬼滅の刃", "genre_id"=>"2"}, "commit"=>"追加"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mAnime Create (3.2ms)[0m  [1m[32mINSERT INTO "animes" ("user_id", "genre_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["genre_id", 2], ["title", "鬼滅の刃"], ["created_at", "2021-08-12 11:04:23.014144"], ["updated_at", "2021-08-12 11:04:23.014144"]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 27ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:04:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.0ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (376.6ms)
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `genre' for #<#<Class:0x00007f5084156860>:0x00007f5094037910>
+Did you mean?  @genres):
+    26:                 <%= link_to anime.title %>
+    27:               </td>
+    28:               <td>
+    29:                 <%= link_to "編集する", edit_admin_genre_path(genre), :class => "btn btn-outline-secondary btn-block" %>
+    30:               </td>
+    31:               <td>
+    32:                 <%= link_to "削除する", admin_genre_path(genre), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+  
+app/views/user/animes/index.html.erb:29:in `block in _app_views_user_animes_index_html_erb__1108753613787063632_69992028659960'
+app/views/user/animes/index.html.erb:23:in `_app_views_user_animes_index_html_erb__1108753613787063632_69992028659960'
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:07:34 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.3ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 166ms (Views: 162.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user/animes" for 60.112.30.198 at 2021-08-12 11:08:33 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0kAmTWvlTG97y2aPWPhV4wj05/duEVYpifRyXS/NHj/mPcJCpXyS8t1N730xHhnOckSPKXhhQXNismxhqzM65w==", "anime"=>{"title"=>"呪術廻戦", "genre_id"=>"2"}, "commit"=>"追加"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[36mAnime Create (2.7ms)[0m  [1m[32mINSERT INTO "animes" ("user_id", "genre_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["genre_id", 2], ["title", "呪術廻戦"], ["created_at", "2021-08-12 11:08:33.170726"], ["updated_at", "2021-08-12 11:08:33.170726"]]
+  ↳ app/controllers/user/animes_controller.rb:16
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/animes_controller.rb:16
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 20ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:08:33 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (4.3ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 178ms (Views: 175.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:08:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.4ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 132ms (Views: 130.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:08:39 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.4ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 143ms (Views: 141.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:08:40 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.7ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (27.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 148ms (Views: 146.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 11:08:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:23
+  Rendered user/animes/index.html.erb within layouts/application (15.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 128ms (Views: 126.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-12 11:10:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `search_for' for #<Class:0x00007f5084055808>):
+  
+app/controllers/user/searches_controller.rb:6:in `search'

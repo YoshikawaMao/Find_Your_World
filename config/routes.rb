@@ -35,5 +35,6 @@ Rails.application.routes.draw do
     resources :voices
     resources :messages
     resources :genres
+    get '/search', to: 'searches#search'
   end
 end

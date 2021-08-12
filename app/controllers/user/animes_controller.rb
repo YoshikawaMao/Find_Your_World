@@ -14,7 +14,7 @@ class User::AnimesController < ApplicationController
   def create
     @anime = Anime.new(anime_params)
     if @anime.save
-       redirect_to user_animes_path
+      redirect_to user_animes_path
     else
       @animes = Anime.all
       render :index
@@ -24,6 +24,7 @@ class User::AnimesController < ApplicationController
   private
 
   def anime_params
-    params.require(:anime).permit(:user_id, :genre_id, :title, :anime_url)
+    params.require(:anime).permit(:genre_id, :title, :anime_url).merge(user_id: current_user.id)
+    # user_idはpermitの中に入れても取って来れないからmerge(カラム名: 追加したいデータ値)で欲しい値を指定してあげる必要がある
   end
 end
