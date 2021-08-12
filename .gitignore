@@ -16,7 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-git checkout 
+git checkout
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep

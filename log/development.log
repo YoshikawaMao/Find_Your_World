@@ -3513,3 +3513,191 @@ Processing by Admins::SessionsController#new as HTML
 Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 60.112.30.198 at 2021-08-12 05:46:56 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 701ms (Views: 693.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 05:46:58 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 117ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 60.112.30.198 at 2021-08-12 05:47:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 221ms (Views: 210.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-12 05:47:19 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 129ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 60.112.30.198 at 2021-08-12 05:47:21 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 117ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 60.112.30.198 at 2021-08-12 05:47:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 122ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 05:47:25 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 128ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_up" for 60.112.30.198 at 2021-08-12 05:47:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::RegistrationsController#new as HTML
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered admins/registrations/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 117ms (Views: 108.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-12 05:47:48 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 113ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 05:48:00 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 122ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-12 05:48:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 100ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-12 05:57:21 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 628ms (Views: 611.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-12 05:58:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 114ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-12 05:59:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 572ms (Views: 556.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-12 06:00:14 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  Rendered user/voices/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 581ms (Views: 572.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-12 06:00:16 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered user/animes/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `genre' for #<ActiveRecord::Relation []>):
+    1: <div class="container">
+    2:     <div class="row">
+    3:       <%= @animes.genre.name %>
+    4:       <div class="col-4">
+    5:         <%= form_with model:@anime, url:admin_genres_path, local:true do |f| %>
+    6:           <h6>おすすめアニメタイトル</h6>
+  
+app/views/user/animes/index.html.erb:3:in `_app_views_user_animes_index_html_erb__2981635568237306821_70061285387560'
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-12 06:00:20 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  Rendered user/voices/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 179ms (Views: 178.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 60.112.30.198 at 2021-08-12 06:00:21 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 116ms (Views: 106.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-12 06:00:22 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
