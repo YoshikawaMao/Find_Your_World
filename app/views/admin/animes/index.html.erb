@@ -1,11 +1,9 @@
 <div class="container">
     <div class="row">
       <div class="col-4">
-
         <%= form_with model:@anime, url:admin_animes_path, local:true do |f| %>
           <h6>アニメURL</h6>
           <%= f.text_field :anime_url, :size=>"30×5" %>
-
           <div class="actions">
             <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
           </div>
