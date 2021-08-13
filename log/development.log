@@ -6701,3 +6701,396 @@ Processing by User::SearchesController#search as HTML
 Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 60.112.30.198 at 2021-08-13 12:21:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 698ms (Views: 689.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-13 12:21:43 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 118ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-13 12:21:46 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.5ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 163ms (Views: 132.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:21:51 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:20
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:24
+  Rendered user/searches/search.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:22:06 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:20
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:24
+  Rendered user/searches/search.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 117ms (Views: 115.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-13 12:22:13 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 120ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-13 12:22:14 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 126ms (Views: 125.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:25:08 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:34
+  Rendered user/searches/search.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-13 12:25:11 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.1ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 113ms (Views: 111.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:25:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  Rendered user/searches/search.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:25:28 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:34
+  Rendered user/searches/search.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 117ms (Views: 115.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:25:29 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  Rendered user/searches/search.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:25:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:34
+  Rendered user/searches/search.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 125ms (Views: 123.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:25:32 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  Rendered user/searches/search.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 102ms (Views: 100.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:26:14 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  Rendered user/searches/search.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 112ms (Views: 109.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:26:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:34
+  Rendered user/searches/search.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 129ms (Views: 128.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-13 12:26:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.7ms)
+  [1m[36mAnime Load (1.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 124ms (Views: 120.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:26:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:11
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:30
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:34
+  Rendered user/searches/search.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 123ms (Views: 122.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:27:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:21
+  Rendered user/searches/search.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 120ms (Views: 116.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:27:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  Rendered user/searches/search.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:27:42 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:21
+  Rendered user/searches/search.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 131ms (Views: 129.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:27:43 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  Rendered user/searches/search.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:27:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:21
+  Rendered user/searches/search.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-13 12:27:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 122ms (Views: 121.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:27:48 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  Rendered user/searches/search.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:27:50 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:21
+  Rendered user/searches/search.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-13 12:27:51 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  Rendered user/searches/search.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 170ms (Views: 167.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-13 12:27:52 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.7ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 115ms (Views: 113.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-13 12:27:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:8
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:21
+  Rendered user/searches/search.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.3ms)
+
+
