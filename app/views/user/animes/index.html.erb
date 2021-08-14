@@ -22,7 +22,7 @@
           <% @animes.each do |anime| %>
             <tr>
               <td>
-                <%= link_to anime.title %>
+                <%= link_to anime.title, user_anime_path(anime.id) %>
               </td>
             </tr>
           <% end %>

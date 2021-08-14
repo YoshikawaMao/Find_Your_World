@@ -11,6 +11,7 @@ class Admin::AnimesController < ApplicationController
   def show
     @anime = Anime.find(params[:id])
   end
+
   # アニメのurl 別に作った方がいいかも
   # def create
   #   @anime = Anime.new(anime_params)
@@ -22,6 +23,20 @@ class Admin::AnimesController < ApplicationController
   #   end
   # end
 
+  def edit
+    @anime = Anime.find(params[:id])
+    @genres = Genre.all
+  end
+
+  def update
+    @anime = Anime.find(params[:id])
+    if @anime.update(anime_params)
+      redirect_to admin_anime_path(@anime.id)
+    else
+      render :edit
+    end
+  end
+
   # アニメのtitle
   def destroy
     @anime = Anime.find(params[:id])
@@ -30,6 +45,6 @@ class Admin::AnimesController < ApplicationController
   end
 
   def anime_params
-    params.require(:anime).permit(:title)
+    params.require(:anime).permit(:title, :genre_id)
   end
 end

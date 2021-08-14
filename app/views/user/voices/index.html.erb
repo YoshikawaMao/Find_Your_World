@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h4>声優一覧</h4>
+      <% @voices.each do |voice| %>
+        <table>
+          <td>
+            <%= link_to voice.name, user_voice_path(voice.id) %>
+          </td>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>
