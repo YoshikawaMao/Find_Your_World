@@ -1,14 +1,5 @@
 <div class="container">
     <div class="row">
-      <div class="col-4">
-        <%= form_with model:@anime, url:admin_animes_path, local:true do |f| %>
-          <h6>アニメURL</h6>
-          <%= f.text_field :anime_url, :size=>"30×5" %>
-          <div class="actions">
-            <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
-          </div>
-        <% end %>
-      </div>
       <div class="col-8">
         <table>
           <% @animes.each do |anime| %>
@@ -17,10 +8,10 @@
                 <%= link_to anime.title %>
               </td>
               <td>
-                <%= link_to "編集する", edit_admin_genre_path(genre), :class => "btn btn-outline-secondary btn-block" %>
+                <%= link_to "編集する", edit_admin_anime_path(anime), :class => "btn btn-outline-secondary btn-block" %>
               </td>
               <td>
-                <%= link_to "削除する", admin_genre_path(genre), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+                <%= link_to "削除する", admin_anime_path(anime), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
               </td>
             </tr>
           <% end %>
