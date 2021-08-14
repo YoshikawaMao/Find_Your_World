@@ -5,7 +5,7 @@
           <% @animes.each do |anime| %>
             <tr>
               <td>
-                <%= link_to anime.title %>
+                <%= link_to anime.title, admin_anime_path(anime.id) %>
               </td>
               <td>
                 <%= link_to "編集する", edit_admin_anime_path(anime), :class => "btn btn-outline-secondary btn-block" %>

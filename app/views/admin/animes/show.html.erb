@@ -1,6 +1,11 @@
 <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-12 text-center">
+        <%= @anime.title %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 mt-5">
         <%= form_with model:@anime, url:admin_animes_path, local:true do |f| %>
           <h6>アニメURL</h6>
           <%= f.text_field :anime_url, :size=>"30×5" %>
@@ -8,6 +13,12 @@
             <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
           </div>
         <% end %>
+      </div>
+      <div class="col-4 mt-5">
+        <!--commentのテンプレ入れる-->
+      </div>
+      <div class="col-4 mt-5">
+        <h6>出演声優</h6>
       </div>
     </div>
 </div>
