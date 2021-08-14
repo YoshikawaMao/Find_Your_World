@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col text-center">
       <%= @voice.name %>
-      <% @voice.anime_
+      <% @voice_animes.each do |voice_anime| %>
         <table>
           <td>
-            <%= link_to voice.name, user_voice_path(voice.id) %>
+            <%= voice_anime %>
           </td>
         </table>
     </div>
