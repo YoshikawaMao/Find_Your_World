@@ -1,0 +1,2 @@
+class AnimeUrl < ApplicationRecord
+end
