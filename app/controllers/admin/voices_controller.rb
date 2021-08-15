@@ -20,6 +20,25 @@ class Admin::VoicesController < ApplicationController
     end
   end
 
+  def edit
+    @voice = Voice.find(params[:id])
+  end
+
+  def update
+    @voice = Voice.find(params[:id])
+    if @voice.update(voice_params)
+      redirect_to admin_voice_path(@voice.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @voice = Voice.find(params[:id])
+    @voice.destroy
+    redirect_to admin_voices_path
+  end
+
   private
 
   def voice_params

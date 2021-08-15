@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col text-center">
       <%= @voice.name %>
-      <% @voice_animes.each do |voice_anime| %>
+      <% @anime_voices.each do |anime_voice| %>
         <table>
           <td>
-            <%= voice_anime %>
+            <%= anime_voice.anime.title %>
           </td>
         </table>
       <% end %>

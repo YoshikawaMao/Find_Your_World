@@ -9975,3 +9975,1294 @@ Processing by Admin::VoicesController#show as HTML
 Completed 200 OK in 158ms (Views: 139.8ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/admin/voices/1" for 60.112.30.198 at 2021-08-15 09:11:28 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 1]]
+  ↳ app/views/admin/voices/show.html.erb:8
+  Rendered admin/voices/show.html.erb within layouts/application (8.4ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 777ms (Views: 745.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/voices/1/edit" for 60.112.30.198 at 2021-08-15 09:11:33 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:24
+  Rendering admin/voices/edit.html.erb within layouts/application
+  Rendered admin/voices/edit.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 145ms (Views: 141.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/voices/1" for 60.112.30.198 at 2021-08-15 09:11:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7Dofk1CUoz39paOJ+3WzzwvQLhi7cStL6X/718oudHbqnA/gFKooO3dD4lhmnaMFF2IOdk+Col5FcIbshsoOg==", "voice"=>{"name"=>"下野紘1"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:29
+  [1m[36mVoice Update (2.2ms)[0m  [1m[33mUPDATE "voices" SET "name" = ?, "updated_at" = ? WHERE "voices"."id" = ?[0m  [["name", "下野紘1"], ["updated_at", "2021-08-15 09:11:38.820214"], ["id", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:29
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:29
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/voices/1
+Completed 302 Found in 20ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/admin/voices/1" for 60.112.30.198 at 2021-08-15 09:11:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 1]]
+  ↳ app/views/admin/voices/show.html.erb:8
+  Rendered admin/voices/show.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/voices/1/edit" for 60.112.30.198 at 2021-08-15 09:11:40 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:24
+  Rendering admin/voices/edit.html.erb within layouts/application
+  Rendered admin/voices/edit.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 123ms (Views: 120.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/voices/1" for 60.112.30.198 at 2021-08-15 09:11:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAaeIebQofet1cMgx6F9vazUnKioxqx3kGfz1gkqvzGAHAZgK8Bb27f+WieB1t3+hKZUKRMVYlPG184i5Bku2g==", "voice"=>{"name"=>"下野紘"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:29
+  [1m[36mVoice Update (1.8ms)[0m  [1m[33mUPDATE "voices" SET "name" = ?, "updated_at" = ? WHERE "voices"."id" = ?[0m  [["name", "下野紘"], ["updated_at", "2021-08-15 09:11:44.386563"], ["id", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:29
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:29
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/voices/1
+Completed 302 Found in 14ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/admin/voices/1" for 60.112.30.198 at 2021-08-15 09:11:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 1]]
+  ↳ app/views/admin/voices/show.html.erb:8
+  Rendered admin/voices/show.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 142ms (Views: 140.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/admin/voices/1" for 60.112.30.198 at 2021-08-15 09:11:57 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5laz6Egb380tc9ByS5SPsQ/Jmz6Ej2uS6o2dZ8CgDO3LCKr1hhw2rGuP/4BBNrs3qciZwj/qtLRcCXfKjlQAag==", "id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:38
+  [1m[36mVoice Destroy (1.4ms)[0m  [1m[31mDELETE FROM "voices" WHERE "voices"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:38
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:38
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/voices
+Completed 302 Found in 13ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/admin/voices" for 60.112.30.198 at 2021-08-15 09:11:57 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#index as HTML
+  Rendering admin/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.2ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/admin/voices/index.html.erb:14
+  Rendered admin/voices/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 136ms (Views: 134.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/voices" for 60.112.30.198 at 2021-08-15 09:12:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nYDwAEW2Nl85JmieyUrXWFcnMGvOrmbCltdlffJtWm2w3ukdi7HfPn/aR2zD6OPe8SYyl3XLueQgU4/QvJlW6g==", "voice"=>{"name"=>"下野紘"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:15
+  [1m[36mVoice Create (1.8ms)[0m  [1m[32mINSERT INTO "voices" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "下野紘"], ["created_at", "2021-08-15 09:12:01.137692"], ["updated_at", "2021-08-15 09:12:01.137692"]]
+  ↳ app/controllers/admin/voices_controller.rb:15
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:15
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/voices
+Completed 302 Found in 13ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/admin/voices" for 60.112.30.198 at 2021-08-15 09:12:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#index as HTML
+  Rendering admin/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/admin/voices/index.html.erb:14
+  Rendered admin/voices/index.html.erb within layouts/application (4.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 128ms (Views: 126.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/voices/2" for 60.112.30.198 at 2021-08-15 09:12:02 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 2]]
+  ↳ app/views/admin/voices/show.html.erb:8
+  Rendered admin/voices/show.html.erb within layouts/application (3.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 141ms (Views: 137.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-15 09:13:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 705ms (Views: 687.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/voices" for 60.112.30.198 at 2021-08-15 09:13:12 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#index as HTML
+  Rendering admin/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/admin/voices/index.html.erb:14
+  Rendered admin/voices/index.html.erb within layouts/application (5.4ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 123ms (Views: 114.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/admins/sign_out" for 60.112.30.198 at 2021-08-15 09:13:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"o7qR2NTy3Sb5qULngiC1wy71Gl+5vcRZ0qKe4LsQPUGO5IjFGvU0R79VbRWIgoFFiPQYowLYG39kJnRN9eQxxg=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admins/sign_in
+Completed 302 Found in 21ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-15 09:13:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 125ms (Views: 124.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-15 09:13:19 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 145ms (Views: 135.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-15 09:13:24 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gKYJTZWFcm4OCjovVPld+lvo4T7wWZfyQjwbKW8MdMcrqQha1ymeJ8ciCeWUGz+bOBNjkHBHqONoFiq8/1e+Eg==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 369ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 09:13:25 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (4.4ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 167ms (Views: 134.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-15 09:13:27 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 124ms (Views: 122.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/voices/2" for 60.112.30.198 at 2021-08-15 09:13:29 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `voice' for #<User::VoicesController:0x00007fc38c3758c8>):
+  
+app/controllers/user/voices_controller.rb:8:in `show'
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-15 09:16:04 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.2ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 692ms (Views: 681.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-15 09:16:06 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (21.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 191ms (Views: 189.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/voices/2" for 60.112.30.198 at 2021-08-15 09:16:08 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVoice Load (0.2ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:8
+  Rendering user/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 2]]
+  ↳ app/views/user/voices/show.html.erb:5
+  Rendered user/voices/show.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 143ms (Views: 133.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/voices/2" for 60.112.30.198 at 2021-08-15 09:18:59 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::VoicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVoice Load (0.2ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:8
+  Rendering user/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 2]]
+  ↳ app/views/user/voices/show.html.erb:5
+  Rendered user/voices/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 639ms (Views: 617.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 09:19:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.9ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (19.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 157ms (Views: 143.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 09:29:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (20.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 737ms (Views: 717.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 10:01:43 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.4ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 765ms (Views: 745.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:01:46 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  Rendered user/messages/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Find_Your_World/app/views/user/messages/index.html.erb:24: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/user/messages/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:03:05 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  Rendered user/messages/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:       <% end %>
+    10:     </div>
+    11:     <div class="col-7 mt-5">
+    12:       <% @messades.each do |message| %>
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+  
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb__2812804769229260424_69880125717000'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:03:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  Rendered user/messages/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:       <% end %>
+    10:     </div>
+    11:     <div class="col-7 mt-5">
+    12:       <% @messades.each do |message| %>
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+  
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb__2812804769229260424_69880102893980'
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-15 10:03:59 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 10:04:00 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.7ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 147ms (Views: 131.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:04:02 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  Rendered user/messages/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:       <% end %>
+    10:     </div>
+    11:     <div class="col-7 mt-5">
+    12:       <% @messades.each do |message| %>
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+  
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb__2812804769229260424_69880113195600'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:04:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 192ms (Views: 155.0ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:04:51 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E+lWl4xTB5gL+7rENi0mWBwQo5nTz2dHBPv8KgP8UuJEFJl2fbiPmclxF8QEz/KJ8xhXc7PIMifGJttbE+decA==", "message"=>{"message_content"=>"テスト"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  Rendering user/messages/index.html.erb within layouts/application
+  Rendered user/messages/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:       <% end %>
+    10:     </div>
+    11:     <div class="col-7 mt-5">
+    12:       <% @messages.each do |message| %>
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+  
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb__2812804769229260424_69880193469600'
+app/controllers/user/messages_controller.rb:13:in `create'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:05:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 134ms (Views: 132.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:05:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 157ms (Views: 146.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:05:45 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iUHCFiobj6m8+q4MpFSxooR4IWfCENXLqLAjrCyuJW7evA332/AHqH5wAwyWtmVza3DVjaIXgKtqbQTdPLUp/A==", "message"=>{"message_content"=>"テスト"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/user/messages_controller.rb:10:in `create'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:09:52 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 797ms (Views: 779.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:10:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YFR7NCdiBIbhDn6yYvKVNIQ1cChd4JV+dzzR3JhnKUQ3qbTV1omMhyOE07JQEEHlaz2Ewj3nwB614fatiHwl1g==", "message"=>{"message_content"=>"テスト"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mMessage Create (3.4ms)[0m  [1m[32mINSERT INTO "messages" ("user_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["message_content", "テスト"], ["created_at", "2021-08-15 10:10:01.325612"], ["updated_at", "2021-08-15 10:10:01.325612"]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 26ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:10:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 143ms (Views: 141.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:13:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+    16:             <% if @user.id == current_user.id %>
+    17:               <%= link_to "削除する", admin_anime_path(anime.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+    18:             <% end %>
+    19:           </td>
+  
+app/views/user/messages/index.html.erb:16:in `block in _app_views_user_messages_index_html_erb___1411318032324663781_32298880'
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb___1411318032324663781_32298880'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:15:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (335.6ms)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `anime' for #<#<Class:0x00000000048065c0>:0x000000000480be30>):
+    14:           <td>
+    15:             <%= message.message_content %>
+    16:             <% if @user.id == current_user.id %>
+    17:               <%= link_to "削除する", admin_anime_path(anime.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+    18:             <% end %>
+    19:           </td>
+    20:         </table>
+  
+app/views/user/messages/index.html.erb:17:in `block in _app_views_user_messages_index_html_erb__3395182472545600760_37763400'
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb__3395182472545600760_37763400'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:16:20 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 764ms (Views: 759.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/messages/1" for 60.112.30.198 at 2021-08-15 10:16:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UpvQG+8ptnJgKZHiEJtqSoHtnarZEfL2szGFkbdEidMFZh/6HsI+c6KjPOIieb6bbuVpQLkWp5Zx7KLgp1+FQQ==", "id"=>"1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:20
+  [1m[36mMessage Destroy (2.2ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/user/messages_controller.rb:20
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:20
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 16ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:16:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 117ms (Views: 113.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:16:37 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KvlvPlCvKyC4RFSfSydx6lPP918+NY1FOLG/FXbbs6jVipdCKk0rUBrvFJPzkkWRkfLNxz/g1XWP+GNRcBiXA==", "message"=>{"message_content"=>"テスト"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:11
+  [1m[36mMessage Create (1.9ms)[0m  [1m[32mINSERT INTO "messages" ("user_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["message_content", "テスト"], ["created_at", "2021-08-15 10:16:37.034724"], ["updated_at", "2021-08-15 10:16:37.034724"]]
+  ↳ app/controllers/user/messages_controller.rb:11
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:11
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 25ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:16:37 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 121ms (Views: 118.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 60.112.30.198 at 2021-08-15 10:16:39 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mNadgc3VihUa8M9lKTLLHCSCOtpDVZb3vx3W5enifF3PK1JgPD4CFNh6YmUb0B/Ny4rOMCNSw5d9wPGU+flwzw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 15ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-15 10:16:39 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 60.112.30.198 at 2021-08-15 10:16:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 128ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 60.112.30.198 at 2021-08-15 10:17:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"puhydUJuuncV0M5PiZeTgye3FGDWHOFsudx/5hH1/Lho/9d22EylFYyFCOG7DGyFEwCTkZVm2kdZvT7GxI0x5Q==", "user"=>{"name"=>"test", "email"=>"tt@tt", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tt@tt"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tt@tt"], ["encrypted_password", "$2a$12$aR3RS8G3.zsLhKsLcOy8punx4cFQ53jtgcX/Qc/2MRfOUgywBR1HK"], ["name", "test"], ["created_at", "2021-08-15 10:17:17.938874"], ["updated_at", "2021-08-15 10:17:17.938874"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 339ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 10:17:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 180ms (Views: 165.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:17:20 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 125ms (Views: 121.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/messages/2" for 60.112.30.198 at 2021-08-15 10:17:25 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gJj6ewwgrxpeY7IwuPXLjnqXWniaiVO5sBB7hFGFU4ubo64QK09U2mROCBtGDZEdLmeEF4LS3adJptP+zOo/SQ==", "id"=>"2"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:20
+  [1m[36mMessage Destroy (2.1ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/user/messages_controller.rb:20
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:20
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 16ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:17:25 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 116ms (Views: 113.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:17:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0wMMIiHEK08aDBVfJ9S4YhhK6LFHY+Me7xVeMLC3uPrIOFhJBqvQjyAhr3TZLOLxTLo23l84bQAWo/ZKLdjUOA==", "message"=>{"message_content"=>"test"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:11
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO "messages" ("user_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["message_content", "test"], ["created_at", "2021-08-15 10:17:35.656338"], ["updated_at", "2021-08-15 10:17:35.656338"]]
+  ↳ app/controllers/user/messages_controller.rb:11
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:11
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 16ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:17:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:6
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 140ms (Views: 137.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:20:19 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+    16:             <% if @user.id == current_user.id %>
+    17:               <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+    18:             <% end %>
+    19:           </td>
+  
+app/views/user/messages/index.html.erb:16:in `block in _app_views_user_messages_index_html_erb__3107845016170871866_27531660'
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb__3107845016170871866_27531660'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:25:19 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+    16:             <% if @user.id == current_user.id %>
+    17:               <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+    18:             <% end %>
+    19:           </td>
+  
+app/views/user/messages/index.html.erb:16:in `block in _app_views_user_messages_index_html_erb___3352049883945668790_34791620'
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb___3352049883945668790_34791620'
+Started GET "/users/sign_up" for 60.112.30.198 at 2021-08-15 10:25:29 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 10:25:29 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.8ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (23.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 618ms (Views: 596.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:25:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    13:         <table>
+    14:           <td>
+    15:             <%= message.message_content %>
+    16:             <% if @user.id == current_user.id %>
+    17:               <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+    18:             <% end %>
+    19:           </td>
+  
+app/views/user/messages/index.html.erb:16:in `block in _app_views_user_messages_index_html_erb___3352049883945668790_70196284180580'
+app/views/user/messages/index.html.erb:12:in `_app_views_user_messages_index_html_erb___3352049883945668790_70196284180580'
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:26:09 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 130ms (Views: 129.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:26:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ziqqiw5uCFKYLBL0wZ6pAw+UvhNNcm3IG572W5GZaEPVEf7gKQHzkqIBqN8/ZvOQW2RgfFUp49biKF4hDPYEgQ==", "message"=>{"message_content"=>"test2"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:26
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mMessage Create (3.8ms)[0m  [1m[32mINSERT INTO "messages" ("user_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["message_content", "test2"], ["created_at", "2021-08-15 10:26:53.447177"], ["updated_at", "2021-08-15 10:26:53.447177"]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 39ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:26:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 159ms (Views: 157.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 60.112.30.198 at 2021-08-15 10:26:58 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yFXgiwE5oVS5s4WNuEedZMsfk0w3gB/E2JXiJrTNzJPTbrTgJlZalIOeP6ZGv8f3n+9NIy/bkdohI0pcKaKgUQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-15 10:26:58 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 128ms (Views: 127.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-15 10:27:00 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 149ms (Views: 148.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-15 10:27:06 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LUN1/ZSAOWbB+fiCBD8EZ/rFL+72lyvzbYNI4h/Lul0mSZ41AdTlUe41NEqfMBn8IuFt86eJt9A96TrH0Q7xPw==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 315ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 10:27:06 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.5ms)
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 193ms (Views: 178.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:27:07 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  Rendered user/messages/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 137ms (Views: 135.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:28:33 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  Rendered user/messages/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 165ms (Views: 160.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:28:43 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lCELykAyWjg6yJXKpMgH6LhzIttnYQW1l2oF/g9ty6fB5V1leyL3Q9+NIAso59QVr6uAcuPwUAq+TY2BFuiwFA==", "message"=>{"message_content"=>"yamada"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mMessage Create (1.8ms)[0m  [1m[32mINSERT INTO "messages" ("user_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["message_content", "yamada"], ["created_at", "2021-08-15 10:28:43.358735"], ["updated_at", "2021-08-15 10:28:43.358735"]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 18ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:28:43 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  Rendered user/messages/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 188ms (Views: 186.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/user/messages/5" for 60.112.30.198 at 2021-08-15 10:28:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OkQ82N+iOSiY5+QztH38+WBxmBxHCxCs4nmi4qpXcmNvgGp35LKUU32iUfI4Ui8Ed6k6tcOaRRPLXiqds9IJ0A==", "id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:19
+  [1m[36mMessage Destroy (1.2ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/user/messages_controller.rb:19
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:19
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 16ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:28:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  Rendered user/messages/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user/messages" for 60.112.30.198 at 2021-08-15 10:28:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+9N3x6CSjtn/9GNpK2khoCmbb/iqkfNScgeVDrOEA4SuFyFom4Ijohqx1qinRvJdPkPNUS4Apu1bIB1xqgF4Nw==", "message"=>{"message_content"=>"yamada"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:26
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO "messages" ("user_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["message_content", "yamada"], ["created_at", "2021-08-15 10:28:53.704747"], ["updated_at", "2021-08-15 10:28:53.704747"]]
+  ↳ app/controllers/user/messages_controller.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/messages_controller.rb:10
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/messages
+Completed 302 Found in 15ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:28:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  Rendered user/messages/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 152ms (Views: 150.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 60.112.30.198 at 2021-08-15 10:28:58 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PbcAqLAYRbFIHfJlfDpS4Z37R2rJKmW+jCMierQqe/Joc1YHiwjoyq1YR6TwFYEciiPlw027MAGlBKoFra8AQQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-15 10:28:58 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 112.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-15 10:29:00 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 128ms (Views: 126.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-15 10:29:08 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TKJSVq0rYgjmnB5pa+F/JpLZp4zN9zc3eWX8XJ9oJPRNDzt1j1pvf2aT37H7PVJUtUvtOMupJ7QG9Qr6CDlYNw==", "user"=>{"name"=>"test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "test"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 312ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-15 10:29:08 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:11
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.6ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:22
+  Rendered user/animes/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 130ms (Views: 128.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-15 10:29:10 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:16
+  Rendered user/messages/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 188ms (Views: 186.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 60.112.30.198 at 2021-08-15 10:29:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cv54RmSNb/ZOfP2J65qaQhMC5KriAnYCop0SlhHchqaLOW+doltWO0KsPtCEXPiofZuGqd6prmtTYhIorxwByw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-15 10:29:15 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 149ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+
+

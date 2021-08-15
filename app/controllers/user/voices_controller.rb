@@ -5,8 +5,8 @@ class User::VoicesController < ApplicationController
   end
 
   def show
-    @voice = voice.find(params[:id])
-    @voice_animes = @voice.anime_id.title.all
+    @voice = Voice.find(params[:id])
+    @anime_voices = @voice.anime_voices
   end
 
 end

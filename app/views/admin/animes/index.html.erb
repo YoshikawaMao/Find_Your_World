@@ -9,10 +9,10 @@
                 <%= link_to anime.title, admin_anime_path(anime.id) %>
               </td>
               <td>
-                <%= link_to "編集する", edit_admin_anime_path(anime), :class => "btn btn-outline-secondary btn-block" %>
+                <%= link_to "編集する", edit_admin_anime_path(anime.id), :class => "btn btn-outline-secondary btn-block" %>
               </td>
               <td>
-                <%= link_to "削除する", admin_anime_path(anime), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+                <%= link_to "削除する", admin_anime_path(anime.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
               </td>
             </tr>
           <% end %>
