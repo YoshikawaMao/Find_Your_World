@@ -24,7 +24,7 @@ class User::AnimesController < ApplicationController
   private
 
   def anime_params
-    params.require(:anime).permit(:genre_id, :title, :anime_url).merge(user_id: current_user.id)
+    params.require(:anime).permit(:genre_id, :title).merge(user_id: current_user.id)
     # user_idはpermitの中に入れても取って来れないからmerge(カラム名: 追加したいデータ値)で欲しい値を指定してあげる必要がある
   end
 end

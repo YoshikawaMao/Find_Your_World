@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :animes
-  has_many :voices
+  # has_many :voices
   has_many :messages
 
   has_many :comments, dependent: :destroy

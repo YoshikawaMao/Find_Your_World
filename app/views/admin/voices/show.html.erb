@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <%= @voice.name %>
+      <!--出演作品を中間テーブルから持ってきたい-->
+      <% @anime_voices.each do |anime_voice| %>
+        <table>
+          <td>
+            <%= anime_voice.anime.title %>
+          </td>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>

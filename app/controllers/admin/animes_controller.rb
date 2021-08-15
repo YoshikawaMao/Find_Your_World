@@ -10,6 +10,7 @@ class Admin::AnimesController < ApplicationController
 
   def show
     @anime = Anime.find(params[:id])
+    # @anime_urls =Anime_url.all
   end
 
   # アニメのurl 別に作った方がいいかも
