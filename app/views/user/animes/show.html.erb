@@ -7,12 +7,44 @@
     </div>
     <div class="row">
       <div class="col-4 mt-5">
+        <%= form_with model: @voice, url: user_voices_path, local:true do |f| %>
+          <table>
+           <th><%= f.label :"声優", class: "mr-5" %></th>
+              <td>
+                <div class="form-group">
+                  <%= f.collection_select :voice_id, @voices, :id, :name, {prompt: "選択してください"}%>
+                </div>
+                <div class="actions">
+                  <%= f.submit "出演", :class => "btn btn-outline-secondary btn-block" %>
+                </div>
+              </td>
+          </table>
+        <% end %>
       </div>
       <div class="col-4 mt-5">
-        <!--commentのテンプレ入れる-->
+        <div class="comments">
+          <p>コメント件数：<%= @anime.comments.count %></p>
+          <% @anime.comments.each do |comment| %>
+            <%= comment.user.name %>
+            <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+          <% end %>
+        </div>
+        <div class="new-comment">
+          <%= form_with(model:[@anime, @comment], url:user_anime_comments_path, local: true) do |f| %>
+            <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+            <%= f.submit "送信する" %>
+          <% end %>
+        </div>
       </div>
       <div class="col-4 mt-5">
         <h6>出演声優</h6>
+          <table>
+            <tr>
+              <td>
+                <%= @voice.name %>
+              </td>
+            </tr>
+          </table>
       </div>
     </div>
 </div>

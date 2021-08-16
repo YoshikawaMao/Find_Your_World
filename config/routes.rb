@@ -30,8 +30,9 @@ Rails.application.routes.draw do
   }
 
   namespace :user do
-    resources :animes
-    resources :comments
+    resources :animes do
+      resources :comments
+    end
     resources :favorites
     resources :voices
     resources :messages

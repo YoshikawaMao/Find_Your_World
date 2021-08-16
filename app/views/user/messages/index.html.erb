@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h3>ジャンル・声優追加希望などございましたらこちらにメッセージをお願いします。</h3>
+    <h3>ジャンル・声優追加希望などございましたら こちらにメッセージをお願いします。</h3>
     <div class="col-5 mt-5">
       <%= form_with model: @message, url:user_messages_path, local:true do |f| %>
       <h4>メッセージ</h4>
@@ -13,6 +13,7 @@
         <table>
           <td>
             <%= message.message_content %>
+            <!--コメントしたuserのみ削除可能-->
             <% if message.user.id == current_user.id %>
               <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
             <% end %>

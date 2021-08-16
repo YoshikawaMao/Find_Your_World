@@ -8,6 +8,9 @@ class User::AnimesController < ApplicationController
 
   def show
     @anime = Anime.find(params[:id])
+    @voices = Voice.all
+    @voice = Voice.new
+    @comment = Comment.new
   end
 
   #アニメのタイトル
