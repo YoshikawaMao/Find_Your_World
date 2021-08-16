@@ -30,13 +30,13 @@ Rails.application.routes.draw do
   }
 
   namespace :user do
-    resources :animes do
-      resources :comments
-    end
     resources :favorites
     resources :voices
     resources :messages
     resources :genres
+    resources :animes do
+      resources :comments
+    end
     get '/search', to: 'searches#search'
   end
 end

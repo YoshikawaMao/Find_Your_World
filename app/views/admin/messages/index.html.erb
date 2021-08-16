@@ -9,7 +9,8 @@
       <% end %>
     </div>
     <div class="col-7 mt-5">
-      <% @messages.each do |message| %>
+  
+      <% Message.all.each do |message| %>
         <table>
           <td>
             <%= message.message_content %>

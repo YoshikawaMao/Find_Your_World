@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2021_08_15_061554) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "admin_id"
     t.text "message_content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

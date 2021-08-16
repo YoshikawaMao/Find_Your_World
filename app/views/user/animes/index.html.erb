@@ -24,9 +24,9 @@
               <td>
                 <%= link_to anime.title, user_anime_path(anime.id) %>
               </td>
+              <td><%= "#{anime.comments.count} コメント" %></td>
             </tr>
           <% end %>
-          <td><%= "#{anime.comments.count} コメント" %></td>
         </table>
       </div>
     </div>

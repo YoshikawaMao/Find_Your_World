@@ -1,12 +1,12 @@
 class Admin::MessagesController < ApplicationController
 
   def index
-    @messages = Message.all
     @message = Message.new
   end
 
   def create
     @message = Message.new(message_params)
+    @message.admin_id = current_admin.id
     if @message.save
       redirect_to admin_messages_path
     else
@@ -25,6 +25,7 @@ class Admin::MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:message_content)
     # .merge(admin_id: current_admin.id)　誰が書き込みしたか入れないとエラーが出るadmin_id入れるべき？
+    # 今回はcreateで定義する方にしました
   end
 
 end

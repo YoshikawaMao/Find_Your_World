@@ -3,7 +3,7 @@ class User::CommentsController < ApplicationController
   def create
     @anime = Anime.find(params[:id])
     @comment = current_user.comments.new(comment_params)
-    @comment.anime_id = anime.id
+    @comment.anime_id = @anime.id
     @comment.save
     redirect_to user_anime_path(@anime.id)
   end

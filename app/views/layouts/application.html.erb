@@ -31,20 +31,20 @@
           </ul>
         <% elsif admin_signed_in? %>
           <ul class="navbar-nav">
-            <!--<li class="nav-item">-->
-            <!--  <%#= link_to " アニメ", admin_animes_path, class: "fas fa-birthday-cake fa-fw faa-wrench nav-link badge badge-pill" %>-->
-            <!--</li>-->
             <li class="nav-item">
-              <%= link_to " 声優", admin_voices_path, class: 'fas fa-users fa-fw faa-wrench nav-link badge badge-pill' %>
+              <%= link_to " アニメ", admin_animes_path, class: "fas fa-user faa-wrench nav-link badge badge-pill" %>
             </li>
             <li class="nav-item">
-              <%= link_to " ジャンル一覧", admin_genres_path, class: 'fas fa-list-alt fa-fw faa-wrench nav-link badge badge-pill' %>
+              <%= link_to " 声優", admin_voices_path, class: 'fas  fa-birthday-cake faa-wrench nav-link badge badge-pill'  %>
             </li>
             <li class="nav-item">
-              <%= link_to " メッセージ", admin_messages_path, class: 'fas fa-file-alt fa-fw faa-wrench nav-link badge badge-pill' %>
+              <%= link_to " ジャンル一覧", admin_genres_path, class: 'fas fa-sign-out-alt faa-wrench nav-link badge badge-pill' %>
             </li>
             <li class="nav-item">
-              <%= link_to " ログアウト", destroy_admin_session_path, method: :delete, class: 'fas fa-sign-out-alt fa-fw faa-wrench nav-link badge badge-pill' %>
+              <%= link_to " メッセージ", admin_messages_path, class: 'fas fa-shopping-cart faa-wrench nav-link badge badge-pill' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to " ログアウト", destroy_admin_session_path, method: :delete, class: 'fas fa-sign-out-alt faa-wrench nav-link badge badge-pill' %>
             </li>
           </ul>
         <% else %>

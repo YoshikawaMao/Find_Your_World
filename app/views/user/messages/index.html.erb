@@ -9,12 +9,12 @@
       <% end %>
     </div>
     <div class="col-7 mt-5">
-      <% @messages.each do |message| %>
+      <% Message.all.each do |message| %>
         <table>
           <td>
             <%= message.message_content %>
             <!--コメントしたuserのみ削除可能-->
-            <% if message.user.id == current_user.id %>
+            <% if message.user == current_user %>
               <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
             <% end %>
           </td>
