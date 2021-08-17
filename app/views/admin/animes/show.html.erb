@@ -2,6 +2,7 @@
     <div class="row">
       <div class="col-12 text-center">
         <%= @anime.title %>
+        ♥<%= @anime.favorites.count %>
         <!--<%#= @anime_url.url %>-->
       </div>
     </div>
@@ -16,10 +17,29 @@
         <%# end %>
       </div>
       <div class="col-4 mt-5">
+        <div class="comments">
+          <p>コメント件数：<%= @comments.count %></p>
+          <% @comments.each do |comment| %>
+          <table>
+            <td><%= comment.created_at.strftime('%Y/%m/%d') %></td>
+            <td><%= comment.comment_content %></td>
+          </table>
+          <% end %>
+        </div>
         <!--commentのテンプレ入れる-->
       </div>
       <div class="col-4 mt-5">
         <h6>出演声優</h6>
+        <table>
+          <tr>
+            <!--中間テーブルからアニメに紐づいた声優さんを持ってきている-->
+            <% @anime_voices.each do |a| %>
+              <td>
+                <%= a.voice.name %>
+              </td>
+            <% end %>
+          </tr>
+        </table>
       </div>
     </div>
 </div>

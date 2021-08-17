@@ -10,6 +10,8 @@ class Admin::AnimesController < ApplicationController
 
   def show
     @anime = Anime.find(params[:id])
+    @anime_voices = AnimeVoice.where(anime_id: params[:id])
+    @comments = Comment.where(anime_id: params[:id])
     # @anime_urls =Anime_url.all
   end
 
