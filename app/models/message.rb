@@ -10,6 +10,7 @@ class Message < ApplicationRecord
     end
   end
   # id.present?=>idがあるか確認するためのif文
+  # selfにはcurrent_user/current_adminが入る
   # ユーザーも管理者もidがnillだった場合ターミナルにエラーが出るようになっている
 
 end

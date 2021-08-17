@@ -20,6 +20,7 @@ class User::VoicesController < ApplicationController
   end
 
   private
-
-  params.require(:voice).permit(:name)
+    def voice_params
+      params.require(:voice).permit(:name)
+    end
 end

@@ -1,19 +1,22 @@
 class User::CommentsController < ApplicationController
 
   def create
-    @anime = Anime.find(params[:id])
-    @comment = current_user.comments.new(comment_params)
-    @comment.anime_id = @anime.id
-    @comment.save
+    @anime = Anime.find(params[:anime_id])
+    comment = current_user.comments.new(comment_params)
+    comment.anime_id = @anime.id
+    comment.save
     redirect_to user_anime_path(@anime.id)
   end
 
   def destroy
+    @anime = Anime.find(params[:anime_id])
+    Comment.find_by(id: params[:id], anime_id: @anime.id).destroy
+    redirect_to user_anime_path(@anime.id)
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:comment_content, :anime_id)
+    params.require(:comment).permit(:comment_content)
   end
 end

@@ -1,18 +1,21 @@
 <div class="container">
     <div class="row">
       <div class="col-4">
-        <%= form_with model:@anime, url:user_animes_path, local:true do |f| %>
-          <%= f.label :"おすすめのアニメタイトル", class: "mr-5" %></th>
-          <div class="form-group">
-            <%= f.text_field :title, :size=>"30×5" %>
-          </div>
-          <%= f.label :"ジャンル", class: "mr-5" %>
-          <div class="form-group">
-            <%= f.collection_select :genre_id, Genre.all, :id, :name, {prompt: "選択してください"}%>
-          </div>
-          <div class="actions">
-            <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
-          </div>
+        <!--ログインしたユーザーのみ表示-->
+        <% if user_signed_in? %>
+          <%= form_with model:@anime, url:user_animes_path, local:true do |f| %>
+            <%= f.label :"おすすめのアニメタイトル", class: "mr-5" %></th>
+            <div class="form-group">
+              <%= f.text_field :title, :size=>"30×5" %>
+            </div>
+            <%= f.label :"ジャンル", class: "mr-5" %>
+            <div class="form-group">
+              <%= f.collection_select :genre_id, Genre.all, :id, :name, {prompt: "選択してください"}%>
+            </div>
+            <div class="actions">
+              <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
+            </div>
+          <% end %>
         <% end %>
         <!--genrelistテンプレート-->
         <%= render 'genrelist' %>
