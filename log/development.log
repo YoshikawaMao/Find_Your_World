@@ -23532,3 +23532,1762 @@ Processing by Admin::AnimesController#show as HTML
 Completed 200 OK in 141ms (Views: 136.8ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-17 14:32:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:21
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:22
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:36
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:38
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:38
+  Rendered admin/animes/show.html.erb within layouts/application (38.4ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 775ms (Views: 747.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/animes" for 60.112.30.198 at 2021-08-17 14:32:50 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#index as HTML
+  Rendering admin/animes/index.html.erb within layouts/application
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/admin/animes/index.html.erb:6
+  Rendered admin/animes/index.html.erb within layouts/application (4.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 159ms (Views: 154.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-17 14:32:53 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:21
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:22
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:36
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:38
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:38
+  Rendered admin/animes/show.html.erb within layouts/application (14.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 133ms (Views: 128.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/animes/2" for 60.112.30.198 at 2021-08-17 14:33:05 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/admin/animes/show.html.erb:21
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/admin/animes/show.html.erb:22
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/admin/animes/show.html.erb:36
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:38
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:38
+  Rendered admin/animes/show.html.erb within layouts/application (13.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 133ms (Views: 129.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/voices" for 60.112.30.198 at 2021-08-17 14:33:11 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#index as HTML
+  Rendering admin/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.2ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/admin/voices/index.html.erb:14
+  Rendered admin/voices/index.html.erb within layouts/application (6.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 144ms (Views: 143.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/voices/1" for 60.112.30.198 at 2021-08-17 14:33:14 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 1]]
+  ↳ app/views/admin/voices/show.html.erb:7
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/voices/show.html.erb:10
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/voices/show.html.erb:10
+  Rendered admin/voices/show.html.erb within layouts/application (9.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 131ms (Views: 126.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/voices/6" for 60.112.30.198 at 2021-08-17 14:33:19 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.7ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 6]]
+  ↳ app/views/admin/voices/show.html.erb:7
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/voices/show.html.erb:10
+  Rendered admin/voices/show.html.erb within layouts/application (6.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 124ms (Views: 120.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/voices/8" for 60.112.30.198 at 2021-08-17 14:33:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 8]]
+  ↳ app/views/admin/voices/show.html.erb:7
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/voices/show.html.erb:10
+  Rendered admin/voices/show.html.erb within layouts/application (6.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 141ms (Views: 137.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/voices" for 60.112.30.198 at 2021-08-17 14:33:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KVxwvrsNZfqHZjuxTikrwGloF6DEr0uUK7jdBqNGlTe5QmIvNEjJUneCWdkXdwy6nC6NMI8EDUiyzYocY9GuiA==", "voice"=>{"name"=>"櫻井孝宏"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:16
+  [1m[36mVoice Create (2.2ms)[0m  [1m[32mINSERT INTO "voices" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "櫻井孝宏"], ["created_at", "2021-08-17 14:33:38.108694"], ["updated_at", "2021-08-17 14:33:38.108694"]]
+  ↳ app/controllers/admin/voices_controller.rb:16
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/voices_controller.rb:16
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/voices
+Completed 302 Found in 14ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/admin/voices" for 60.112.30.198 at 2021-08-17 14:33:38 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#index as HTML
+  Rendering admin/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/admin/voices/index.html.erb:14
+  Rendered admin/voices/index.html.erb within layouts/application (5.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 128ms (Views: 127.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/voices/10" for 60.112.30.198 at 2021-08-17 14:34:00 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::VoicesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admin/voices_controller.rb:9
+  Rendering admin/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 10]]
+  ↳ app/views/admin/voices/show.html.erb:7
+  Rendered admin/voices/show.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 139ms (Views: 135.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/genres" for 60.112.30.198 at 2021-08-17 14:34:04 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:14
+  Rendered admin/genres/index.html.erb within layouts/application (3.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 124ms (Views: 117.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/messages" for 60.112.30.198 at 2021-08-17 14:34:07 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MessagesController#index as HTML
+  Rendering admin/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/admin/messages/index.html.erb:13
+  Rendered admin/messages/index.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 126ms (Views: 118.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/messages" for 60.112.30.198 at 2021-08-17 14:34:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JSN4IThv4PBOFBIkBST0srQqc2tNF3iwRm1vMDorntqyR1BfCDNp9P+PasHOlPZSyEPTbvv/vXVJF2l1+xP2vA==", "message"=>{"message_content"=>"管理者テスト"}, "commit"=>"投稿"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/messages_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/messages_controller.rb:10
+  [1m[36mMessage Create (1.6ms)[0m  [1m[32mINSERT INTO "messages" ("admin_id", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["admin_id", 1], ["message_content", "管理者テスト"], ["created_at", "2021-08-17 14:34:17.598025"], ["updated_at", "2021-08-17 14:34:17.598025"]]
+  ↳ app/controllers/admin/messages_controller.rb:10
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/messages_controller.rb:10
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/messages
+Completed 302 Found in 14ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/admin/messages" for 60.112.30.198 at 2021-08-17 14:34:17 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MessagesController#index as HTML
+  Rendering admin/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/admin/messages/index.html.erb:13
+  Rendered admin/messages/index.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 143ms (Views: 142.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admin/messages/2" for 60.112.30.198 at 2021-08-17 14:34:28 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MessagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dYgQcUT9Ol7RpFmCyTx++OBtRIyIRZYh7HJYMV1e5UsBStfOUK7q3TY0s2LLr5TTE4JNjjMDZfzp6M2PIhbvwg==", "id"=>"2"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/messages_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/messages_controller.rb:19
+  [1m[36mMessage Destroy (1.1ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/admin/messages_controller.rb:19
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/messages_controller.rb:19
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/messages
+Completed 302 Found in 13ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/admin/messages" for 60.112.30.198 at 2021-08-17 14:34:28 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MessagesController#index as HTML
+  Rendering admin/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/admin/messages/index.html.erb:13
+  Rendered admin/messages/index.html.erb within layouts/application (4.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admins/sign_out" for 60.112.30.198 at 2021-08-17 14:34:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SyOZnzTX3Gwx4BjObugkli3NCo5XntCS/PNwAtcFny4/4V4gIIQM79Zw8i5se8693iIDjOzYI0/5aeW8qE2Vpw=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admins/sign_in
+Completed 302 Found in 16ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins/sign_in" for 60.112.30.198 at 2021-08-17 14:34:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 141ms (Views: 139.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-17 14:34:33 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 126ms (Views: 117.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-17 14:34:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ALrdKbmxREM5NzIUAe0BHCetYTo5Bu9i3K1LjjcF+R0CiNwkAN1hk68stUAwn81qFlCmPE7uuXdC8bUpcO1uyQ==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 319ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:34:41 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.6ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 152ms (Views: 149.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/user/animes/2/favorites" for 60.112.30.198 at 2021-08-17 14:34:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Tl5U3wYeHtGRDnyjdIpj75jiYYkWpgJ0h0Wo0n8+D/6+dkjFT2MjVw699Du7H3Gn+qGvOEq+rMmm2Aw2ZE6YlA==", "anime_id"=>"2"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[36mFavorite Create (3.6ms)[0m  [1m[32mINSERT INTO "favorites" ("anime_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["anime_id", 2], ["user_id", 1], ["created_at", "2021-08-17 14:34:44.794445"], ["updated_at", "2021-08-17 14:34:44.794445"]]
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 29ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:34:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.6ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 164ms (Views: 161.2ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/user/animes/2/favorites" for 60.112.30.198 at 2021-08-17 14:34:48 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PdetR4DiN3a0yGRiKUN8v9OZyJYHrHR4s630frSppYDN/7FdyZ8K8Ct77Prm1m73sdoGJ1u02sWSMFCar9ky6g==", "anime_id"=>"2"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."anime_id" = ? LIMIT ?[0m  [["user_id", 1], ["anime_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:12
+  [1m[36mFavorite Destroy (1.4ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/user/favorites_controller.rb:12
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:12
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 17ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:34:48 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.9ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 149ms (Views: 145.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/user/animes/2/favorites" for 60.112.30.198 at 2021-08-17 14:34:50 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"KNADS0T3cvyhWygWorYjtLZ0gNNn+kuNAvhgxADAkDzY+B9RDYpPej7ooI5tIzH81DdOYjvi5TAjZcQgG7AHVg==", "anime_id"=>"2"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[36mFavorite Create (1.6ms)[0m  [1m[32mINSERT INTO "favorites" ("anime_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["anime_id", 2], ["user_id", 1], ["created_at", "2021-08-17 14:34:50.952131"], ["updated_at", "2021-08-17 14:34:50.952131"]]
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 18ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:34:50 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.5ms)
+  [1m[36mAnime Load (0.4ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 208ms (Views: 203.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=1" for 60.112.30.198 at 2021-08-17 14:34:54 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"1"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:6
+  [1m[36mAnime Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:14
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 1]]
+  ↳ app/views/user/searches/search.html.erb:18
+  Rendered user/searches/search.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 127ms (Views: 124.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/search?search%5Bvalue%5D=2" for 60.112.30.198 at 2021-08-17 14:34:56 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::SearchesController#search as HTML
+  Parameters: {"search"=>{"value"=>"2"}}
+  Rendering user/searches/search.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/searches/search.html.erb:6
+  [1m[36mAnime Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "animes" WHERE "animes"."genre_id" = ? LIMIT ?[0m  [["genre_id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/searches/search.html.erb:14
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT "animes".* FROM "animes" WHERE "animes"."genre_id" = ?[0m  [["genre_id", 2]]
+  ↳ app/views/user/searches/search.html.erb:18
+  Rendered user/searches/search.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:34:59 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.4ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 162ms (Views: 159.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:35:03 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:16
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:62
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:63
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:74
+  Rendered user/animes/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 132ms (Views: 128.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/voices" for 60.112.30.198 at 2021-08-17 14:35:09 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NFFvHZL0MuVhsMYCAkoWpYDp1ApRZQlbDcLeFjWRfcGMAUk4ZM/ZGk3hgxSXekAkZLRApATgn0bSIjRX4G+PRg==", "voice"=>{"voice_id"=>"10", "anime_id"=>"3"}, "commit"=>"出演"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mAnimeVoice Create (1.0ms)[0m  [1m[32mINSERT INTO "anime_voices" ("voice_id", "anime_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["voice_id", 10], ["anime_id", 3], ["created_at", "2021-08-17 14:35:09.885109"], ["updated_at", "2021-08-17 14:35:09.885109"]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/voices_controller.rb:17
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes/3
+Completed 302 Found in 17ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:35:09 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:16
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:62
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:63
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:74
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:76
+  Rendered user/animes/show.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 159ms (Views: 155.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/animes/3/comments" for 60.112.30.198 at 2021-08-17 14:35:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"utxt+0TWea2NToQAbZxEx7fv1yKV/vG1TrsbA/iiSk9K9HHhDatEKxL9DJiiCVaP1awZk8nmXwhvJr/n49LdJQ==", "comment"=>{"comment_content"=>"野球作品"}, "commit"=>"送信する", "anime_id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/comments_controller.rb:7
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/comments_controller.rb:7
+  [1m[36mComment Create (2.5ms)[0m  [1m[32mINSERT INTO "comments" ("anime_id", "user_id", "comment_content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["anime_id", 3], ["user_id", 1], ["comment_content", "野球作品"], ["created_at", "2021-08-17 14:35:23.374231"], ["updated_at", "2021-08-17 14:35:23.374231"]]
+  ↳ app/controllers/user/comments_controller.rb:7
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/comments_controller.rb:7
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes/3
+Completed 302 Found in 24ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:35:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:16
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:62
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:63
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:74
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:76
+  Rendered user/animes/show.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 130ms (Views: 126.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/animes/3/favorites" for 60.112.30.198 at 2021-08-17 14:35:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"f0aZzpoTojQ+nBBzpyk/N44i8YESXIWwf+WprpJuMNSPboXU026fsqEvmOtovC1/7GE/ME5EKw1eeA1KiR6nvg==", "anime_id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[36mFavorite Create (1.8ms)[0m  [1m[32mINSERT INTO "favorites" ("anime_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["anime_id", 3], ["user_id", 1], ["created_at", "2021-08-17 14:35:31.588809"], ["updated_at", "2021-08-17 14:35:31.588809"]]
+  ↳ app/controllers/user/favorites_controller.rb:5
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes/3
+Completed 302 Found in 18ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:35:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:62
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:63
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:74
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:76
+  Rendered user/animes/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 153ms (Views: 149.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:35:34 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.3ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 145ms (Views: 142.7ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/user/animes/3/favorites" for 60.112.30.198 at 2021-08-17 14:35:37 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FYcQ0pYBz3uEFKGVSmiv9XDl2K1FLL3iyYA7vYK8ox/lrwzI33zy/RunKQ2F/b29EqYWHBk0E1/oHZ9Zmcw0dQ==", "anime_id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:11
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."anime_id" = ? LIMIT ?[0m  [["user_id", 1], ["anime_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/favorites_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:12
+  [1m[36mFavorite Destroy (1.1ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/user/favorites_controller.rb:12
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/favorites_controller.rb:12
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 17ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:35:37 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.5ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 150ms (Views: 145.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:35:39 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:16
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:62
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:63
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:74
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:76
+  Rendered user/animes/show.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 154ms (Views: 149.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-17 14:35:43 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 116ms (Views: 115.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/voices/10" for 60.112.30.198 at 2021-08-17 14:35:45 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:8
+  Rendering user/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 10]]
+  ↳ app/views/user/voices/show.html.erb:5
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/user/voices/show.html.erb:8
+  Rendered user/voices/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 138ms (Views: 135.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-17 14:35:49 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:17
+  Rendered user/messages/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 121ms (Views: 118.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:35:59 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.4ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 173ms (Views: 169.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-17 14:36:02 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 118ms (Views: 116.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:36:04 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.6ms)
+  [1m[36mAnime Load (0.9ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 141ms (Views: 137.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:36:06 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:62
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:63
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:74
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:76
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:76
+  Rendered user/animes/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 154ms (Views: 149.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:38:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:53
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:54
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:65
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  Rendered user/animes/show.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 816ms (Views: 776.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:38:34 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:53
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:54
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:65
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  Rendered user/animes/show.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 139ms (Views: 134.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user/voices" for 60.112.30.198 at 2021-08-17 14:38:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XeszRjZGsWj8ktXYq4K0d9kqD+ff9EOh16IdtdsEi/qtwy9cfzuM7mMhXUBkF6Y/u2nBVoPs7Rz2P7lRwHQckA==", "voice"=>{"voice_id"=>"7", "anime_id"=>"1"}, "commit"=>"出演"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mAnimeVoice Create (2.2ms)[0m  [1m[32mINSERT INTO "anime_voices" ("voice_id", "anime_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["voice_id", 7], ["anime_id", 1], ["created_at", "2021-08-17 14:38:56.004502"], ["updated_at", "2021-08-17 14:38:56.004502"]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/voices_controller.rb:17
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes/1
+Completed 302 Found in 22ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:38:56 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:53
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:54
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:65
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  Rendered user/animes/show.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 143ms (Views: 139.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-17 14:39:00 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 142ms (Views: 140.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/voices/7" for 60.112.30.198 at 2021-08-17 14:39:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:8
+  Rendering user/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.2ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 7]]
+  ↳ app/views/user/voices/show.html.erb:5
+  [1m[36mAnime Load (0.9ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/voices/show.html.erb:8
+  Rendered user/voices/show.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 153ms (Views: 137.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-17 14:39:04 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 118ms (Views: 116.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/messages" for 60.112.30.198 at 2021-08-17 14:39:09 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::MessagesController#index as HTML
+  Rendering user/messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/user/messages/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/messages/index.html.erb:17
+  Rendered user/messages/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 150ms (Views: 141.7ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for 60.112.30.198 at 2021-08-17 14:39:11 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6La04zONiVG7nfb07p3lonqR6x3kbx+y+Gi4ZK48bO0Ynqj5evC01yQufmwhCPfqGNIlrLh3sQ/Z9RyAtUz7hw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-17 14:39:11 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 121ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:39:14 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (6.3ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 164ms (Views: 159.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:39:16 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:33
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:53
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:54
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:65
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:67
+  Rendered user/animes/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 132ms (Views: 127.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:41:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 136ms (Views: 131.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:41:47 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 210ms (Views: 206.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:42:24 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:58
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:69
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  Rendered user/animes/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 134ms (Views: 130.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:42:46 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:58
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:69
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  Rendered user/animes/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 139ms (Views: 134.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:42:52 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:58
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:69
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:71
+  Rendered user/animes/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 152ms (Views: 148.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:43:23 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (3.6ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 138ms (Views: 135.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:43:25 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 152ms (Views: 129.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/voices" for 60.112.30.198 at 2021-08-17 14:43:30 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#index as HTML
+  Rendering user/voices/index.html.erb within layouts/application
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/voices/index.html.erb:5
+  Rendered user/voices/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 120ms (Views: 119.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/voices/1" for 60.112.30.198 at 2021-08-17 14:43:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:8
+  Rendering user/voices/show.html.erb within layouts/application
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."voice_id" = ?[0m  [["voice_id", 1]]
+  ↳ app/views/user/voices/show.html.erb:5
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/voices/show.html.erb:8
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user/voices/show.html.erb:8
+  Rendered user/voices/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 119ms (Views: 115.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 60.112.30.198 at 2021-08-17 14:43:35 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 194ms (Views: 193.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-17 14:43:39 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nVpFAYogJgCbaRHlliH32BRp4u/sPQpqFfyuhI+dYeOKjctUuf+GU/lrWWO3WZpNVmy5/Quqf4RBC/aMAcfhnQ==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 347ms (ActiveRecord: 0.2ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nVpFAYogJgCbaRHlliH32BRp4u/sPQpqFfyuhI+dYeOKjctUuf+GU/lrWWO3WZpNVmy5/Quqf4RBC/aMAcfhnQ==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 429ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 60.112.30.198 at 2021-08-17 14:43:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IrZwHZzSyjtvswwae1Q+aC+ZtsUTmDtLKZcOSjQBBGHAK6yNwRTblcQXHkm/b0FdLD+mFYQhuYtyEyyYlQiicw==", "user"=>{"name"=>"山田太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "山田太郎"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes
+Completed 302 Found in 311ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:43:45 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/index.html.erb:5
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/index.html.erb:13
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (6.5ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:38
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:44
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 202ms (Views: 199.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:43:49 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:35
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 201ms (Views: 195.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/animes/2" for 60.112.30.198 at 2021-08-17 14:44:01 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/show.html.erb:10
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:35
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 148ms (Views: 143.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:44:13 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:16
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:35
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 158ms (Views: 153.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/voices" for 60.112.30.198 at 2021-08-17 14:44:20 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::VoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fahfTmsskruYsHY3Dc5VCNgxdVqpG2noMeeWxtSOBxxjlClJLmhlRzhBv9oa47sxM7D1ooDxjR1CX1O9Og+stg==", "voice"=>{"voice_id"=>"6", "anime_id"=>"3"}, "commit"=>"出演"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[36mAnimeVoice Create (1.7ms)[0m  [1m[32mINSERT INTO "anime_voices" ("voice_id", "anime_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["voice_id", 6], ["anime_id", 3], ["created_at", "2021-08-17 14:44:20.946419"], ["updated_at", "2021-08-17 14:44:20.946419"]]
+  ↳ app/controllers/user/voices_controller.rb:17
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user/voices_controller.rb:17
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/user/animes/3
+Completed 302 Found in 16ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:44:20 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:6
+  [1m[36mFavorite Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."anime_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["anime_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/anime.rb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:16
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT "voices".* FROM "voices"[0m
+  ↳ app/views/user/animes/show.html.erb:35
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 60.112.30.198 at 2021-08-17 14:44:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xel/pq862ufIXLPBSpOjMJVJ28lkfiLkdBXJCP76H9vnsa3SFDojMhaKbBE9x79brNLgdncoPVEvRwdk0CPpRA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.112.30.198 at 2021-08-17 14:44:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 104ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/animes" for 60.112.30.198 at 2021-08-17 14:44:27 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#index as HTML
+  Rendering user/animes/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/user/animes/_genrelist.html.erb:3
+  Rendered user/animes/_genrelist.html.erb (2.9ms)
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/user/animes/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 2]]
+  ↳ app/views/user/animes/index.html.erb:55
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:49
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/index.html.erb:55
+  Rendered user/animes/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 143ms (Views: 140.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/animes/3" for 60.112.30.198 at 2021-08-17 14:44:28 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 3]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/animes/1" for 60.112.30.198 at 2021-08-17 14:44:45 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by User::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user/animes_controller.rb:11
+  Rendering user/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:56
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:57
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/user/animes/show.html.erb:68
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/user/animes/show.html.erb:70
+  Rendered user/animes/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 144ms (Views: 139.5ms | ActiveRecord: 1.7ms)
+
+
