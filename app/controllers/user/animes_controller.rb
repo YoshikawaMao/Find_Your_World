@@ -13,6 +13,7 @@ class User::AnimesController < ApplicationController
     # @user = @anime.user
     @voice = Voice.new
     @comment = Comment.new
+    @comments = Comment.where(anime_id: params[:id])
   end
 
   #アニメのタイトル

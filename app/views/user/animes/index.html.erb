@@ -28,20 +28,27 @@
                 <%= link_to anime.title, user_anime_path(anime.id) %>
               </td>
               <td>
-                <% if anime.favorited_by?(current_user) %>
-                  <p>
-                    <%= link_to user_anime_favorites_path(anime), method: :delete do %>
-                      ♥<%= anime.favorites.count %>
-                    <% end %>
-                  </p>
+                <!--!=は等しくないの意味-->
+                <% if current_user != nil %>
+                  <% if anime.favorited_by?(current_user) %>
+                    <p>
+                      <%= link_to user_anime_favorites_path(anime), method: :delete do %>
+                        ♥<%= anime.favorites.count %>
+                      <% end %>
+                    </p>
+                  <% else %>
+                    <p>
+                      <%= link_to user_anime_favorites_path(anime), method: :post do %>
+                        ♡<%= anime.favorites.count %>
+                      <% end %>
+                    </p>
+                  <% end %>
                 <% else %>
-                  <p>
-                    <%= link_to user_anime_favorites_path(anime), method: :post do %>
-                      ♡<%= anime.favorites.count %>
-                    <% end %>
-                  </p>
+                  ♥<%= anime.favorites.count %>
                 <% end %>
-                <%#= render partial: 'favorites/favorite-btn', locals: { anime: @anime} %>
+                <!--部分テンプレエラー解消しました(使用可能)-->
+                <%#= render partial: 'favorites/favorite-btn', locals: { anime: anime} %>
+                <%#= render 'user/favorites/favorite-btn', anime: anime %>
               </td>
               <td><%= "#{anime.comments.count} コメント" %></td>
             </tr>

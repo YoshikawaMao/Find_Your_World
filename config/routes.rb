@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     resources :animes do
       resource :favorites, only: [:create, :destroy]
       resources :comments, only: [:create, :destroy]
-  end
+    end
     get '/search', to: 'searches#search'
   end
 end
