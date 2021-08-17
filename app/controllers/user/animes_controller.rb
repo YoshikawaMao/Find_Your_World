@@ -12,6 +12,8 @@ class User::AnimesController < ApplicationController
     @voices = Voice.all
     # @user = @anime.user
     @voice = Voice.new
+    @anime_voices = AnimeVoice.where(anime_id: params[:id])
+    #@anime_voices = AnimeVoice.where(voice_id: params[:id])
     @comment = Comment.new
     @comments = Comment.where(anime_id: params[:id])
   end

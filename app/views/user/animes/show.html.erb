@@ -2,18 +2,23 @@
     <div class="row">
       <div class="col-12 text-center">
         <%= @anime.title %>
-        <% if @anime.favorited_by?(current_user) %>
-          <p>
-            <%= link_to user_anime_favorites_path(@anime), method: :delete do %>
-              ♥<%= @anime.favorites.count %>
-            <% end %>
-          </p>
+        <%# if current_user != nil %>
+        <% if !current_user.nil? %>
+          <% if @anime.favorited_by?(current_user) %>
+            <p>
+              <%= link_to user_anime_favorites_path(@anime), method: :delete do %>
+                ♥<%= @anime.favorites.count %>
+              <% end %>
+            </p>
+          <% else %>
+            <p>
+              <%= link_to user_anime_favorites_path(@anime), method: :post do %>
+                ♡<%= @anime.favorites.count %>
+              <% end %>
+            </p>
+          <% end %>
         <% else %>
-          <p>
-            <%= link_to user_anime_favorites_path(@anime), method: :post do %>
-              ♡<%= @anime.favorites.count %>
-            <% end %>
-          </p>
+          ♥<%= @anime.favorites.count %>
         <% end %>
         <!--<%#= @anime_url.url %>-->
       </div>
@@ -27,6 +32,8 @@
               <div class="form-group">
                 <%= f.collection_select :voice_id, @voices, :id, :name, {prompt: "選択してください"}%>
               </div>
+
+              <%= f.hidden_field :anime_id, :value => @anime.id %>
               <div class="actions">
                 <%= f.submit "出演", :class => "btn btn-outline-secondary btn-block" %>
               </div>
@@ -63,9 +70,12 @@
         <h6>出演声優</h6>
         <table>
           <tr>
-            <td>
-              <%= @voice.name %>
-            </td>
+            <% @anime_voices.each do |a| %>
+              <td>
+                <%= a.voice.name %>
+                <%#= a.anime.title %>
+              </td>
+            <% end %>
           </tr>
         </table>
       </div>
