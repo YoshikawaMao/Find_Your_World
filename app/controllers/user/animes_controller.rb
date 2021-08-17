@@ -10,7 +10,6 @@ class User::AnimesController < ApplicationController
   def show
     @anime = Anime.find(params[:id])
     @voices = Voice.all
-    # @user = @anime.user
     @voice = Voice.new
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
     #@anime_voices = AnimeVoice.where(voice_id: params[:id])

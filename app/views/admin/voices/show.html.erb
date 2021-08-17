@@ -4,7 +4,6 @@
       <%= @voice.name %>
       <%= link_to "編集する", edit_admin_voice_path(@voice.id), :class => "btn btn-outline-secondary btn-block" %>
       <%= link_to "削除する", admin_voice_path(@voice.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
-      <!--出演作品を中間テーブルから持ってきたい-->
       <% @anime_voices.each do |anime_voice| %>
         <table>
           <td>

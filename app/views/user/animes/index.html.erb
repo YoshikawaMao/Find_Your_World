@@ -29,7 +29,9 @@
               </td>
               <td>
                 <!--!=は等しくないの意味-->
-                <% if current_user != nil %>
+                <%# if current_user != nil %>
+                <!--もしcurrent_user.nilじゃなかったら？-->
+                <% if !current_user.nil? %>
                   <% if anime.favorited_by?(current_user) %>
                     <p>
                       <%= link_to user_anime_favorites_path(anime), method: :delete do %>

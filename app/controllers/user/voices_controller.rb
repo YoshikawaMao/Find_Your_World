@@ -7,15 +7,15 @@ class User::VoicesController < ApplicationController
   def show
     @voice = Voice.find(params[:id])
     # @anime_voices = AnimeVoice.where(voice_id: params[:id])
+    # findは１件、whereは複数件探してデータを持ってこられる
     @anime_voices = AnimeVoice.where(voice_id: @voice.id)
   end
 
   def create
-    # @voice = Voice.new(voice_params)
+    # user側からの声優の投稿は中間テーブルに入るようにするからモデル名はAnimeVoiceになる
     @voice = AnimeVoice.new(voice_params)
-    #@voice.user_id = current_user.id
     if @voice.save
-      # redirect_to user_anime_path(@voice.id)
+      # createしたら元のviewに戻る
       redirect_back(fallback_location: root_path)
     else
       render "animes/show"
@@ -24,7 +24,7 @@ class User::VoicesController < ApplicationController
 
   private
     def voice_params
-      # params.require(:voice).permit(:name)
       params.require(:voice).permit(:voice_id, :anime_id)
+
     end
 end

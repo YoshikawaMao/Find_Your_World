@@ -7,7 +7,8 @@ class Admin::VoicesController < ApplicationController
 
   def show
     @voice = Voice.find(params[:id])
-    @anime_voices = @voice.anime_voices
+    # @anime_voices = @voice.anime_voices
+    @anime_voices = AnimeVoice.where(voice_id: @voice.id)
   end
 
   def create
