@@ -5,13 +5,13 @@
         <% if @anime.favorited_by?(current_user) %>
           <p>
             <%= link_to user_anime_favorites_path(@anime), method: :delete do %>
-              ♥<%= @anime.favorites.count %> いいね
+              ♥<%= @anime.favorites.count %>
             <% end %>
           </p>
         <% else %>
           <p>
-          <%= link_to user_anime_favorites_path(@anime), method: :post do %>
-            ♡<%= @anime.favorites.count %> いいね
+            <%= link_to user_anime_favorites_path(@anime), method: :post do %>
+              ♡<%= @anime.favorites.count %>
             <% end %>
           </p>
         <% end %>
@@ -43,11 +43,21 @@
           <% end %>
         </div>
         <div class="new-comment">
+          <!--アニメに結びついたコメントのため２つ必要-->
           <%= form_with(model:[@anime, @comment], url:user_anime_comments_path, local: true) do |f| %>
             <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
             <%= f.submit "送信する" %>
           <% end %>
         </div>
+        <%= form_with model:@voice, url:user_voices_path, local:true do |f| %>
+          <%= f.label :"出演声優追加", class: "mr-5" %>
+          <div class="form-group">
+            <%= f.collection_select :voice_id, @voices, :id, :name, {prompt: "選択してください"}%>
+          </div>
+          <div class="actions">
+            <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
+          </div>
+        <% end %>
       </div>
       <div class="col-4 mt-5">
         <h6>出演声優</h6>

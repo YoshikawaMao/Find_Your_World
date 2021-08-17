@@ -4,11 +4,13 @@ class User::AnimesController < ApplicationController
     @animes = Anime.all.page(params[:page]).per(15)
     @anime = Anime.new
     @genres = Genre.all
+    # @user = current_user
   end
 
   def show
     @anime = Anime.find(params[:id])
     @voices = Voice.all
+    # @user = @anime.user
     @voice = Voice.new
     @comment = Comment.new
   end

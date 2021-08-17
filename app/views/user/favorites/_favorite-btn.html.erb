@@ -1,0 +1,13 @@
+<% if anime.favorited_by?(current_user) %>
+    <p>
+      <%= link_to user_anime_favorites_path(anime), method: :delete do %>
+        ♥<%= anime.favorites.count %>
+      <% end %>
+    </p>
+<% else %>
+    <p>
+    <%= link_to user_anime_favorites_path(anime), method: :post do %>
+      ♡<%= anime.favorites.count %>
+      <% end %>
+    </p>
+<% end %>
