@@ -31,25 +31,27 @@
                 <!--!=は等しくないの意味-->
                 <%# if current_user != nil %>
                 <!--もしcurrent_user.nilじゃなかったら？-->
-                <% if !current_user.nil? %>
-                  <% if anime.favorited_by?(current_user) %>
-                    <p>
-                      <%= link_to user_anime_favorites_path(anime), method: :delete do %>
-                        ♥<%= anime.favorites.count %>
-                      <% end %>
-                    </p>
-                  <% else %>
-                    <p>
-                      <%= link_to user_anime_favorites_path(anime), method: :post do %>
-                        ♡<%= anime.favorites.count %>
-                      <% end %>
-                    </p>
-                  <% end %>
-                <% else %>
-                  ♥<%= anime.favorites.count %>
-                <% end %>
+                <%# if !current_user.nil? %>
+                  <%# if anime.favorited_by?(current_user) %>
+                    <!--<p>-->
+                <!--      <%#= link_to user_anime_favorites_path(anime), method: :delete, remote: true do %>-->
+                <!--        ♥<%#= anime.favorites.count %>-->
+                <!--      <%# end %>-->
+                <!--    </p>-->
+                <!--  <%# else %>-->
+                <!--    <p>-->
+                <!--      <%#= link_to user_anime_favorites_path(anime), method: :post, remote: true do %>-->
+                <!--        ♡<%#= anime.favorites.count %>-->
+                <!--      <%# end %>-->
+                <!--    </p>-->
+                <!--  <%# end %>-->
+                <!--<%# else %>-->
+                <!--  ♥<%#= anime.favorites.count %>-->
+                <!--<%# end %>-->
                 <!--部分テンプレエラー解消しました(使用可能)-->
-                <%#= render partial: 'favorites/favorite-btn', locals: { anime: anime} %>
+                <div id="favorite-btn_<%= anime.id %>">
+                  <%= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
+                </div>
                 <%#= render 'user/favorites/favorite-btn', anime: anime %>
               </td>
               <td><%= "#{anime.comments.count} コメント" %></td>
