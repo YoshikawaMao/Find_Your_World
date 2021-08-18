@@ -12,7 +12,7 @@ class Admin::AnimesController < ApplicationController
     @anime = Anime.find(params[:id])
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
     @comments = Comment.where(anime_id: params[:id])
-    # @anime_urls =Anime_url.all
+    @anime_urls =AnimeUrl.all
   end
 
   # アニメのurl 別に作った方がいいかも
@@ -48,6 +48,6 @@ class Admin::AnimesController < ApplicationController
   end
 
   def anime_params
-    params.require(:anime).permit(:title, :genre_id)
+    params.require(:anime).permit(:title, :genre_id, :anime_url_id)
   end
 end

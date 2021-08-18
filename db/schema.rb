@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_08_15_061554) do
   end
 
   create_table "anime_urls", force: :cascade do |t|
-    t.text "url"
+    t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

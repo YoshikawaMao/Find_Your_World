@@ -3,18 +3,26 @@
       <div class="col-12 text-center">
         <%= @anime.title %>
         ♥<%= @anime.favorites.count %>
-        <!--<%#= @anime_url.url %>-->
+
+      <% @anime_urls.each do |url| %>
+        <table>
+          <td>
+          <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
+          <%= link_to "削除する", admin_anime_url_path(ulr.id) , method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+          </td>
+        </table>
+      <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-4 mt-5">
-        <!--<%#= form_with model:@anime_url, url:admin_anime_urls_path, local:true do |f| %>-->
+        <%= form_with model:@anime_url, url:admin_anime_urls_path, local:true do |f| %>
           <h6>アニメURL</h6>
-          <%#= f.text_field :url, :size=>"30×5" %>
+          <%= f.text_field :address, :size=>"30×5" %>
           <div class="actions">
-            <%#= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
+            <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
           </div>
-        <%# end %>
+        <% end %>
       </div>
       <div class="col-4 mt-5">
         <div class="comments">
