@@ -4,18 +4,16 @@ class User::CommentsController < ApplicationController
     @anime = Anime.find(params[:anime_id])
     comment = current_user.comments.new(comment_params)
     comment.anime_id = @anime.id
-    if comment.save
-      redirect_back(fallback_location: root_path)
-      # redirect_to user_anime_path(@anime.id)
-    else
-      redirect_back(fallback_location: root_path)
-    end
+    comment.save
+    # redirect_back(fallback_location: root_path)
+    # redirect_to user_anime_path(@anime.id)
+    # @comments = Comment.where(anime_id: params[:id])
   end
 
   def destroy
     @anime = Anime.find(params[:anime_id])
     Comment.find_by(id: params[:id], anime_id: @anime.id).destroy
-    redirect_back(fallback_location: root_path)
+    # redirect_back(fallback_location: root_path)
     # redirect_to user_anime_path(@anime.id)
   end
 
