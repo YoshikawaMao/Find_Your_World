@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_15_061554) do
+ActiveRecord::Schema.define(version: 2021_08_19_104414) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_08_15_061554) do
     t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "anime_id"
   end
 
   create_table "anime_voices", force: :cascade do |t|
@@ -41,7 +42,6 @@ ActiveRecord::Schema.define(version: 2021_08_15_061554) do
   create_table "animes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "genre_id"
-    t.integer "anime_url_id"
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

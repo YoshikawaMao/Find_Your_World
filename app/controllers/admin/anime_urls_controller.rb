@@ -2,7 +2,7 @@ class Admin::AnimeUrlsController < ApplicationController
 
   def create
     @anime_url = AnimeUrl.new(anime_url_params)
-    if @anime_url.save!
+    if @anime_url.save
       redirect_back(fallback_location: root_path)
     else
       redirect_back(fallback_location: root_path)
@@ -18,6 +18,6 @@ class Admin::AnimeUrlsController < ApplicationController
   private
 
   def anime_url_params
-    params.require(:anime_url).permit(:address)
+    params.require(:anime_url).permit(:address, :anime_id)
   end
 end

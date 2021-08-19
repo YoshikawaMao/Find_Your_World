@@ -9,7 +9,7 @@
           <table>
             <td>
             <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
-            <%= link_to "削除する", admin_anime_url_path(ulr.id) , method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+            <%= link_to "削除する", admin_anime_url_path(url.id) , method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
             </td>
           </table>
         <% end %>
@@ -18,9 +18,13 @@
     </div>
     <div class="row">
       <div class="col-4 mt-5">
-        <%= form_with model:@anime_url, url:admin_anime_urls_path, local:true do |f| %>
+        <%= form_with model: @anime_url, url: admin_anime_urls_path, local:true do |f| %>
           <h6>アニメURL</h6>
           <%= f.text_field :address, :size=>"30×5" %>
+
+          <!--アニメidを送る-->
+          <%= f.hidden_field :anime_id, :value => @anime.id %>
+
           <div class="actions mt-1">
             <%= f.submit "追加", :class => "btn btn-outline-secondary" %>
           </div>
