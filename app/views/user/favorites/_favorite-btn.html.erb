@@ -3,17 +3,19 @@
 <!--もしcurrent_user.nilじゃなかったら？-->
 <% if !current_user.nil? %>
     <% if anime.favorited_by?(current_user) %>
-      <p>
         <%= link_to user_anime_favorites_path(anime), method: :delete, remote: true do %>
-          ♥<%= anime.favorites.count %>
+          <i class="fas fa-heart like-btn" ></i>
+          <span class = count_like>
+            <%= anime.favorites.count %>
+          </span>
         <% end %>
-      </p>
     <% else %>
-      <p>
         <%= link_to user_anime_favorites_path(anime), method: :post, remote: true do %>
-          ♡<%= anime.favorites.count %>
+          <i class="fas fa-heart unlike-btn"></i>
+          <span class = count_unlike>
+            <%= anime.favorites.count %>
+          </span>
         <% end %>
-      </p>
     <% end %>
 <% else %>
     ♥<%= anime.favorites.count %>

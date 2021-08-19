@@ -1,9 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col text-center">
-      <%= @voice.name %>
+    <div class="col text-center my-5">
+      <h3><%= @voice.name %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
       <% @anime_voices.each do |anime_voice| %>
-        <table>
+        <table align=center >
           <td>
             <%= anime_voice.anime.title %>
           </td>

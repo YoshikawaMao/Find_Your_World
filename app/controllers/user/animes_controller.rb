@@ -1,7 +1,9 @@
 class User::AnimesController < ApplicationController
 
   def index
-    @animes = Anime.all.page(params[:page]).per(15)
+    animes = Anime.includes(:favorited_users).sort {|a,b| b.favorited_users.size <=> a.favorited_users.size}
+    @animes = Kaminari.paginate_array(animes).page(params[:page]).per(20)
+    # @animes = Anime.all.page(params[:page]).per(15)
     @anime = Anime.new
     @genres = Genre.all
   end

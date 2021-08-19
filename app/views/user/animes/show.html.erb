@@ -14,20 +14,24 @@
       <div class="col-4 mt-5">
         <%= form_with model: @voice, url: user_voices_path, local:true do |f| %>
           <table>
-            <th><%= f.label :"出演声優追加", class: "mr-5" %></th>
-            <td>
-              <div class="form-group">
-                <%= f.collection_select :voice_id, @voices, :id, :name, {prompt: "選択してください"}%>
-              </div>
-              <!--アニメidを送る-->
-              <%= f.hidden_field :anime_id, :value => @anime.id %>
-              <div class="actions">
-                <%= f.submit "出演", :class => "btn btn-outline-secondary btn-block" %>
-              </div>
-            </td>
+            <tr>
+              <td><%= f.label :"出演声優追加", class: "mr-5" %></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="form-group">
+                  <%= f.collection_select :voice_id, @voices, :id, :name, {prompt: "選択してください"}%>
+                </div>
+                <!--アニメidを送る-->
+                <%= f.hidden_field :anime_id, :value => @anime.id %>
+                <div class="actions">
+                  <%= f.submit "出演", :class => "btn btn-outline-secondary btn-block" %>
+                </div>
+              </td>
+            </tr>
           </table>
         <% end %>
-        <div class="new-comment">
+        <div class="new-comment mt-5">
           <!--アニメに結びついたコメントのため２つ必要-->
           <%= form_with(model:[@anime,@comment], url: user_anime_comments_path(anime_id: @anime.id) ) do |f| %>
             <%= f.text_area :comment_content, rows:'5',placeholder: "コメントをここに" %>

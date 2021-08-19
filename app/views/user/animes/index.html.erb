@@ -13,14 +13,14 @@
               <%= f.collection_select :genre_id, Genre.all, :id, :name, {prompt: "選択してください"}%>
             </div>
             <div class="actions">
-              <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
+              <%= f.submit "追加", :class => "btn btn-outline-secondary" %>
             </div>
           <% end %>
         <% end %>
         <!--genrelistテンプレート-->
         <%= render 'genrelist' %>
       </div>
-      <div class="col-8">
+      <div class="col-8 mx-auto">
         <table>
           <% @animes.each do |anime| %>
             <tr>
@@ -29,13 +29,15 @@
               </td>
               <td>
                 <div id="favorite-btn_<%= anime.id %>">
+                  &emsp;
                   <%= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
                 </div>
               </td>
-              <td><%= "#{anime.comments.count} コメント" %></td>
+              <td>&emsp;<%= "#{anime.comments.count} コメント" %></td>
             </tr>
           <% end %>
         </table>
+        <%= paginate @animes %>
       </div>
     </div>
 </div>

@@ -9,14 +9,15 @@
             </li>
           <% end %>
         </ul>
+        &emsp;<%= link_to "アニメ一覧に戻る", user_animes_path %>
       </div>
       <div class="col-8 mt-4">
         <% if @datas.empty? %>
           <h2>該当する作品はありません</h2>
         <% else %>
-          <div class="d-flex flex-wrap mt-2 mb-4">
+          <div class="col-8 mt-4">
             <% @datas.each do |data| %>
-              <div class="flex_container mr-4 mt-2">
+              <div class="container mr-4 mt-6 mb-2">
                 <div>
                   <%= link_to data.title,  user_anime_path(data) %>
                 </div>
@@ -24,6 +25,7 @@
             <% end %>
           </div>
         <% end %>
+        <%= paginate @datas %>
       </div>
     </div>
 </div>

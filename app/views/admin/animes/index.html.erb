@@ -7,6 +7,7 @@
             <tr>
               <td>
                 <%= link_to anime.title, admin_anime_path(anime.id) %>
+                &emsp;
               </td>
               <td>
                 <%= link_to "編集する", edit_admin_anime_path(anime.id), :class => "btn btn-outline-secondary btn-block" %>
@@ -14,6 +15,13 @@
               <td>
                 <%= link_to "削除する", admin_anime_path(anime.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
               </td>
+              <td>
+                <div id="favorite-btn_<%= anime.id %>">
+                  &emsp;
+                  <%= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
+                </div>
+              </td>
+              <td>&emsp;<%= "#{anime.comments.count} コメント" %></td>
             </tr>
           <% end %>
         </table>
