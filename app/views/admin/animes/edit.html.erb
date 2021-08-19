@@ -6,13 +6,23 @@
   </div>
   <%= form_with model:@anime, url:admin_anime_path(@anime), local:true do |f| %>
     <div class="row">
-      <div class="col-2">アニメタイトル</div>
-      <div class="col-3"><%= f.text_field :title  %></div>
-      <div class="col-3">
+      <div class="col-6 mx-auto text-center mt-5">
+        <h5>アニメタイトル</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 mx-auto text-center mt-2">
+        <%= f.text_field :title  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 mx-auto text-center mt-2">
         <%= f.collection_select(:genre_id, @genres, :id, :name, {prompt: "選択してください"})%>
       </div>
-      <div class="col-2">
-        <%= f.submit "変更を保存", :class => "btn btn-outline-secondary btn-block" %>
+    </div>
+    <div class="row">
+      <div class="col-6 mx-auto text-center mt-2">
+        <%= f.submit "変更を保存", :class => "btn btn-outline-secondary" %>
       </div>
     </div>
   <% end %>

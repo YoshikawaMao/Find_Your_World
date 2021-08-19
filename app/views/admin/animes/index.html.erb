@@ -18,7 +18,9 @@
               <td>
                 <div id="favorite-btn_<%= anime.id %>">
                   &emsp;
-                  <%= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
+                  <i class="fas fa-heart like-btn" ></i>
+                  <%= anime.favorites.count %>
+                  <%#= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
                 </div>
               </td>
               <td>&emsp;<%= "#{anime.comments.count} コメント" %></td>

@@ -2,8 +2,8 @@
     <div class="row">
       <div class="col-12 text-center">
         <%= @anime.title %>
-        ♥<%= @anime.favorites.count %>
-
+        <i class="fas fa-heart like-btn" ></i>
+        <%= @anime.favorites.count %>
         <!--urlを表示-->
         <% @anime_urls.each do |url| %>
           <table>
@@ -13,7 +13,6 @@
             </td>
           </table>
         <% end %>
-
       </div>
     </div>
     <div class="row">

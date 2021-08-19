@@ -1,23 +1,22 @@
 <div class="container">
     <div class="row">
-      <div class="col-5">
+      <div class="col-5 mt-5">
         <h3>ジャンル追加</h3>
         <%= form_with model:@genre, url:admin_genres_path, method: :post, local:true do |f| %>
           <h6>ジャンル名</h6>
           <%= f.text_field :name, :size=>"30×5" %>
-          <div class="actions">
-            <%= f.submit "新規登録", :class => "btn btn-outline-secondary btn-block" %>
+          <div class="actions mt-2">
+            <%= f.submit "新規登録", :class => "btn btn-outline-secondary" %>
           </div>
         <% end %>
       </div>
-      <div class="col-7">
+      <div class="col-7 mt-5">
+        <h5>ジャンル一覧</h5>
         <% @genres.each do |genre| %>
           <table>
             <tr>
               <td>
                 <%= genre.name %>
-                <!--<%#= link_to genre.name, admin_animes_genre_path(genre_id: genre.id) %>-->
-                <!--genreに紐づいているアニメ一覧に飛ばしたい-->
               </td>
               <td>
                 <%= link_to "編集する", edit_admin_genre_path(genre), :class => "btn btn-outline-secondary btn-block" %>

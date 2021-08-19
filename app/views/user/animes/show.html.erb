@@ -1,18 +1,25 @@
 <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <%= @anime.title %>
+        <h3><%= @anime.title %></h3>
         <!--いいね機能テンプレート-->
         <div id="favorite-btn_<%= @anime.id %>">
           <%= render partial: 'user/favorites/favorite-btn', locals: { anime: @anime} %>
         </div>
-        <% @anime_urls.each do |url| %>
-          <table>
-            <td>
-            <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
-            </td>
-          </table>
-        <% end %>
+        <div class="mt-3">
+          <% if @anime_urls.empty? %>
+           <h6>URL追加予定！</h6>
+          <% else %>
+            <% @anime_urls.each do |url| %>
+              <table align=center>
+                <h6>気になった方は公式HPのURLをクリック！！</h6>
+                <td>
+                <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
+                </td>
+              </table>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -58,14 +65,16 @@
         </div>
       </div>
       <div class="col-4 mt-5">
-        <h6>出演声優</h6>
+        <h5>出演声優</h5>
         <table>
             <!--中間テーブルからアニメに紐づいた声優さんを持ってきている-->
             <% @anime_voices.each do |a| %>
             <tr>
               <td>
-                <%= a.voice.name %>
-                <%#= a.anime.title %>
+                <h6>
+                  <%= a.voice.name %>
+                  <%#= a.anime.title %>
+                </h6>
               </td>
             </tr>
             <% end %>
