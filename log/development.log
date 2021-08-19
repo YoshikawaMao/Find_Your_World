@@ -33246,3 +33246,519 @@ Processing by Admin::AnimesController#show as HTML
 Completed 200 OK in 122ms (Views: 117.0ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:40:44 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.2ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (37.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 391ms (Views: 361.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 12:40:56 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zSy2WgCRjMmc1hyTWAIA7Yfmsc+hB2Q0IalvtlZBNPgqaCI098HEuL2/2TgpY4r0ZQMTCkEwQGIzSdiFKJBnUg==", "address"=>"https://kimetsu.com/anime/risshihen/", "commit"=>"追加"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: anime_url):
+  
+app/controllers/admin/anime_urls_controller.rb:21:in `anime_url_params'
+app/controllers/admin/anime_urls_controller.rb:4:in `create'
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:50:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.2ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (42.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 396ms (Views: 365.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:50:59 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (14.4ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 73ms (Views: 69.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 12:51:18 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1vKrWMFKnJD/kJI/vOhZia31afR9ALTxeTXfH+gW+ygH17DlFViA2KXh+OPkit/xFJ3YjHDJoXXBGBPAXEIRg==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/animes/1
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:51:18 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (15.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 12:52:36 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RBoqm0+dN6IrlRrtR/iS5A3poxGBRYlPyjvlAkH/VZmjXr71uM1/0wr830Y2mRj97wwB1GFyrRnY21IxPy4GMw==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/animes/1
+Completed 302 Found in 16ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:52:36 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (33.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 114ms (Views: 98.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:59:10 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (35.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 399ms (Views: 360.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 12:59:13 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRl7nsaEfoLQ/f4tkXzb9NeWZm+qGhR6m0R6dzSXXDoqXe/wMdQ28/GUO4bgHVHtNXPEqkotMCyJpM1ESkYPkA==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/animes/1
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:59:13 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (12.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 12:59:34 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (30.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 135ms (Views: 108.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 13:01:52 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.2ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (35.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 393ms (Views: 361.5ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 13:01:55 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+999h7EYI7CHbHICMy3b9Vl+0283QzarXrhrjx+l27Ucm+npRkhrwaYFt6lCTFHsu5txqtd0Ev1MWNy8YXSIHw==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Anime must exist):
+  
+app/controllers/admin/anime_urls_controller.rb:5:in `create'
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 13:04:26 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (30.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 134ms (Views: 108.4ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 13:04:30 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eMNgtekVZVwsMe32Mi2+ZtTTNCiSt8kJIXP5liMlBdefh/TbHkUtLQ1YKF1DTDR/NjaW7XKA7V8zk06lXfRWfQ==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Redirected to https://c1ef1bb1bbf64fdcbb481d2ee3680974.vfs.cloud9.ap-northeast-1.amazonaws.com/admin/animes/1
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 13:04:30 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (11.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 13:04:46 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:44
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (29.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 133ms (Views: 108.5ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 13:04:48 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ukp56nisFxdpT0BclkMzjjryTRJAqBRDzgYWHTBGVdm1Du2Ej/xfZkgmhffnIrmX2Bfv16CfMBXc5qEuTpcGcw==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Anime must exist):
+  
+app/controllers/admin/anime_urls_controller.rb:5:in `create'
+Started GET "/admin/animes/1" for 60.112.30.198 at 2021-08-18 13:29:29 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAnime Load (0.1ms)[0m  [1m[34mSELECT  "animes".* FROM "animes" WHERE "animes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/animes_controller.rb:12
+  Rendering admin/animes/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:5
+  [1m[36mAnimeUrl Load (0.1ms)[0m  [1m[34mSELECT "anime_urls".* FROM "anime_urls"[0m
+  ↳ app/views/admin/animes/show.html.erb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:29
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:30
+  [1m[36mAnimeVoice Load (0.1ms)[0m  [1m[34mSELECT "anime_voices".* FROM "anime_voices" WHERE "anime_voices"."anime_id" = ?[0m  [["anime_id", 1]]
+  ↳ app/views/admin/animes/show.html.erb:43
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  [1m[36mVoice Load (0.1ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admin/animes/show.html.erb:46
+  Rendered admin/animes/show.html.erb within layouts/application (31.2ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 147ms (Views: 117.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/admin/anime_urls" for 60.112.30.198 at 2021-08-18 13:29:31 +0000
+Cannot render console from 60.112.30.198! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AnimeUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W22EigWtayvjBOB3TzOHxV0hT6Svmf0KFd+xxieMdUC8KRDk8v0jWsJtJdw+Ug3cv8TtYU+u2VwHPwb1WV0m6g==", "anime_url"=>{"address"=>"https://kimetsu.com/anime/risshihen/"}, "commit"=>"追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/anime_urls_controller.rb:5
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Anime must exist):
+  
+app/controllers/admin/anime_urls_controller.rb:5:in `create'

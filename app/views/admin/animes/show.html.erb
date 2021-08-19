@@ -4,14 +4,16 @@
         <%= @anime.title %>
         ♥<%= @anime.favorites.count %>
 
-      <% @anime_urls.each do |url| %>
-        <table>
-          <td>
-          <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
-          <%= link_to "削除する", admin_anime_url_path(ulr.id) , method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
-          </td>
-        </table>
-      <% end %>
+        <!--urlを表示-->
+        <% @anime_urls.each do |url| %>
+          <table>
+            <td>
+            <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
+            <%= link_to "削除する", admin_anime_url_path(ulr.id) , method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+            </td>
+          </table>
+        <% end %>
+
       </div>
     </div>
     <div class="row">
@@ -34,19 +36,18 @@
           </table>
           <% end %>
         </div>
-        <!--commentのテンプレ入れる-->
       </div>
       <div class="col-4 mt-5">
         <h6>出演声優</h6>
         <table>
-          <tr>
-            <!--中間テーブルからアニメに紐づいた声優さんを持ってきている-->
-            <% @anime_voices.each do |a| %>
+          <!--中間テーブルからアニメに紐づいた声優さんを持ってきている-->
+          <% @anime_voices.each do |a| %>
+            <tr>
               <td>
                 <%= a.voice.name %>
               </td>
-            <% end %>
-          </tr>
+            </tr>
+          <% end %>
         </table>
       </div>
     </div>

@@ -4,7 +4,6 @@ class User::AnimesController < ApplicationController
     @animes = Anime.all.page(params[:page]).per(15)
     @anime = Anime.new
     @genres = Genre.all
-    # @user = current_user
   end
 
   def show
@@ -32,6 +31,6 @@ class User::AnimesController < ApplicationController
 
   def anime_params
     params.require(:anime).permit(:genre_id, :title).merge(user_id: current_user.id)
-    # user_idはpermitの中に入れても取って来れないからmerge(カラム名: 追加したいデータ値)で欲しい値を指定してあげる必要がある
+    # user_idはpermitの中に入れても取って来れないからmerge(カラム名: 追加したいデータ値)で欲しい値を指定する必要がある
   end
 end

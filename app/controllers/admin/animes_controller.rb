@@ -2,7 +2,6 @@ class Admin::AnimesController < ApplicationController
 
   def index
     @animes = Anime.all.page(params[:page]).per(15)
-    # @animes = Anime.where(genre_id: params[:genre_id])
     @anime = Anime.new
     @genres = Genre.all
   end
@@ -12,19 +11,10 @@ class Admin::AnimesController < ApplicationController
     @anime = Anime.find(params[:id])
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
     @comments = Comment.where(anime_id: params[:id])
+    @anime_url = AnimeUrl.new
     @anime_urls =AnimeUrl.all
   end
 
-  # アニメのurl 別に作った方がいいかも
-  # def create
-  #   @anime = Anime.new(anime_params)
-  #   if @anime.save
-  #     redirect_to admin_animes_path
-  #   else
-  #     @animes = Anime.all
-  #     render :index
-  #   end
-  # end
 
   def edit
     @anime = Anime.find(params[:id])

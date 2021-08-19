@@ -40,17 +40,10 @@
         <div class="comments">
           <p>コメント件数：<%= @comments.count %></p>
 
-          <li id="comments_area">
+          <div id="comments_area">
             <%= render partial: 'user/comments/index', locals: { comments: @comments } %>
-          </li>
+          </div>
 
-          <!--<%# @comments.each do |comment| %>-->
-          <!--  <%#= comment.created_at.strftime('%Y/%m/%d') %>-->
-          <!--  <%#= comment.comment_content %>-->
-          <!--  <%# if comment.user == current_user %>-->
-          <!--    <%#= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>-->
-          <!--  <%# end %>-->
-          <!--<%# end %>-->
         </div>
       </div>
       <div class="col-4 mt-5">
