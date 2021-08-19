@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-4 mt-5">
       <%= form_with model:@voice, url:admin_voices_path, local:true do |f| %>
         <h6>声優名</h6>
         <%= f.text_field :name, :size=>"30×5" %>
-        <div class="actions">
-          <%= f.submit "新規登録", :class => "btn btn-outline-secondary btn-block" %>
+        <div class="actions mt-1">
+          <%= f.submit "新規登録", :class => "btn btn-outline-secondary" %>
         </div>
       <% end %>
     </div>
-    <div class="col-8">
+    <div class="col-8 mt-5">
       <h4>声優一覧</h4>
       <% @voices.each do |voice| %>
         <table>

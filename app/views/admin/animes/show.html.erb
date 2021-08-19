@@ -9,7 +9,7 @@
           <table>
             <td>
             <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
-            <%= link_to "削除する", admin_anime_url_path(ulr.id) , method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+            <%= link_to "削除する", admin_anime_url_path(ulr.id) , method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
             </td>
           </table>
         <% end %>
@@ -21,20 +21,27 @@
         <%= form_with model:@anime_url, url:admin_anime_urls_path, local:true do |f| %>
           <h6>アニメURL</h6>
           <%= f.text_field :address, :size=>"30×5" %>
-          <div class="actions">
-            <%= f.submit "追加", :class => "btn btn-outline-secondary btn-block" %>
+          <div class="actions mt-1">
+            <%= f.submit "追加", :class => "btn btn-outline-secondary" %>
           </div>
         <% end %>
       </div>
       <div class="col-4 mt-5">
         <div class="comments">
           <p>コメント件数：<%= @comments.count %></p>
-          <% @comments.each do |comment| %>
           <table>
-            <td><%= comment.created_at.strftime('%Y/%m/%d') %></td>
-            <td><%= comment.comment_content %></td>
+            <% @comments.each do |comment| %>
+              <tr>
+                <td><%= comment.created_at.strftime('%Y/%m/%d') %></td>
+              </tr>
+              <tr>
+                <td><%= comment.comment_content %></td>
+                <td>
+                  <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+                </td>
+              </tr>
+            <% end %>
           </table>
-          <% end %>
         </div>
       </div>
       <div class="col-4 mt-5">

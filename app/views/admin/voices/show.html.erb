@@ -1,13 +1,21 @@
 <div class="container">
   <div class="row">
+    <div class="col text-center my-5">
+      <h3><%= @voice.name %></h3>
+      <%= link_to "編集する", edit_admin_voice_path(@voice.id), :class => "btn btn-outline-secondary" %>
+      <%= link_to "削除する", admin_voice_path(@voice.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+    </div>
+  </div>
+  <div class="row">
     <div class="col text-center">
-      <%= @voice.name %>
-      <%= link_to "編集する", edit_admin_voice_path(@voice.id), :class => "btn btn-outline-secondary btn-block" %>
-      <%= link_to "削除する", admin_voice_path(@voice.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+      <h4>出演作品</h4>
       <% @anime_voices.each do |anime_voice| %>
-        <table>
+        <table align=center>
           <td>
             <%= anime_voice.anime.title %>
+          </td>
+          <td>
+            <%= link_to "削除する", user_voice_path(anime_voice.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
           </td>
         </table>
       <% end %>

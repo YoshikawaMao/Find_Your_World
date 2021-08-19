@@ -22,6 +22,13 @@ class User::VoicesController < ApplicationController
     end
   end
 
+  def destroy
+    @voice = AnimeVoice.find(params[:id])
+    @voice.destroy
+    redirect_back(fallback_location: root_path)
+  end
+
+
   private
     def voice_params
       params.require(:voice).permit(:voice_id, :anime_id)

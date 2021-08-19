@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h3>ジャンル・声優追加希望などございましたら こちらにメッセージをお願いします。</h3>
+    <h3 class="my-4">ジャンル・声優追加希望などございましたら こちらにメッセージをお願いします。</h3>
     <div class="col-5 mt-5">
       <%= form_with model: @message, url:admin_messages_path, local:true do |f| %>
       <h4>メッセージ</h4>
@@ -9,14 +9,11 @@
       <% end %>
     </div>
     <div class="col-7 mt-5">
-  
       <% Message.all.each do |message| %>
-        <table>
-          <td>
-            <%= message.message_content %>
-            <%= link_to "削除する", admin_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
-          </td>
-        </table>
+        <div class="my-4">
+          <%= message.message_content %>
+          <%= link_to "削除する", admin_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+        </div>
       <% end %>
     </div>
   </div>
