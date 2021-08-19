@@ -6,6 +6,13 @@
         <div id="favorite-btn_<%= @anime.id %>">
           <%= render partial: 'user/favorites/favorite-btn', locals: { anime: @anime} %>
         </div>
+        <% @anime_urls.each do |url| %>
+          <table>
+            <td>
+            <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
+            </td>
+          </table>
+        <% end %>
       </div>
     </div>
     <div class="row">
