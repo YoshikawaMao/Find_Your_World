@@ -14,7 +14,7 @@ class Admin::AnimesController < ApplicationController
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
     @comments = Comment.where(anime_id: params[:id])
     @anime_url = AnimeUrl.new
-    @anime_urls =AnimeUrl.all
+    @anime_urls =AnimeUrl.where(anime_id: params[:id])
   end
 
 
