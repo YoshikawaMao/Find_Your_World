@@ -28,6 +28,11 @@ class User::VoicesController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def search
+    # @searchs = Voice.search(params[:search])
+    @value = params["search"]["value"]
+    @datas = search_for(@value)
+  end
 
   private
     def voice_params

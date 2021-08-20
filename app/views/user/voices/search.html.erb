@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col my-3">
+      <%= form_with model: @datas, url: user_voices_search_path, method: :get, local:true do |f| %> <%#　projects_pathはモデル名で読みかえること %>
+        <p>
+          <%= f.text_field :search %>
+          <%= f.submit "Search", :name => nil %>
+        </p>
+      <% end %>
+      <h4>声優一覧</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+      <% if @datas.empty? %>
+        <h2>該当する作品はありません</h2>
+      <% else %>
+        <% @datas.each do |voice| %>
+          <table>
+            <tr>
+              <td>
+                <%= link_to voice.name, user_voice_path(voice.id) %>
+              </td>
+            </tr>
+          </table>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
