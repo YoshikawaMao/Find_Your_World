@@ -40,6 +40,10 @@ class Admin::VoicesController < ApplicationController
     redirect_to admin_voices_path
   end
 
+  def search
+    @voices = Voice.search(params[:keyword])
+  end
+
   private
 
   def voice_params

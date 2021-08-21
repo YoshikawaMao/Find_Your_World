@@ -1,15 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col my-3">
-      <%= form_with url: user_voices_search_path, method: :get, local:true do |f| %>
-       <%= f.text_field 'search[value]' %>
+      <%= form_with url: search_user_voices_path, method: :get, local:true do |f| %>
+       <%= f.text_field 'keyword', placeholder: "検索する" %>
         <%= f.submit :"検索" %>
-
-
-        <!--<p>-->
-        <!--  <%#= f.text_field :search %>-->
-        <!--  <%#= f.submit "Search", :name => nil %>-->
-        <!--</p>-->
       <% end %>
       <h4>声優一覧</h4>
     </div>

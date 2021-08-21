@@ -29,9 +29,7 @@ class User::VoicesController < ApplicationController
   end
 
   def search
-    # @searchs = Voice.search(params[:search])
-    @value = params["search"]["value"]
-    @datas = search_for(@value)
+    @voices = Voice.search(params[:keyword])
   end
 
   private

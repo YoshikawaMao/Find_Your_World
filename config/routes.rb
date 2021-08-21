@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :animes
     resources :comments
-    resources :voices
+    resources :voices do
+      collection do
+        get 'search'
+      end
+    end
     resources :messages
     resources :genres
     resources :anime_urls
@@ -30,7 +34,11 @@ Rails.application.routes.draw do
   }
 
   namespace :user do
-    resources :voices
+    resources :voices do
+      collection do
+        get 'search'
+      end
+    end
     resources :messages
     resources :genres
     resources :animes do
@@ -38,6 +46,6 @@ Rails.application.routes.draw do
       resources :comments, only: [:create, :destroy]
     end
     get '/search', to: 'searches#search'
-    get 'voices/search', to: 'voices#search'
+    # get 'voices/search', to: 'voices#search'
   end
 end
