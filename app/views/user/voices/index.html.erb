@@ -3,22 +3,24 @@
     <div class="col my-3">
       <%= form_with url: search_user_voices_path, method: :get, local:true do |f| %>
        <%= f.text_field 'keyword', placeholder: "検索する" %>
-        <%= f.submit :"検索" %>
+        <%= f.submit "検索" %>
       <% end %>
-      <h4>声優一覧</h4>
     </div>
   </div>
   <div class="row">
+    <h4>声優一覧</h4>
+  </div>
+  <div class="row">
     <div class="col-7">
-        <% @voices.each do |voice| %>
-          <table>
-            <tr>
-              <td>
-                <%= link_to voice.name, user_voice_path(voice.id) %>
-              </td>
-            </tr>
-          </table>
-        <% end %>
+      <% @voices.each do |voice| %>
+        <table>
+          <tr>
+            <td>
+              <%= link_to voice.name, user_voice_path(voice.id) %>
+            </td>
+          </tr>
+        </table>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-4 mt-5">
-      <%= form_with model:@voice, url:admin_voices_path, local:true do |f| %>
+      <%= form_with model: @voice, url:admin_voices_path, local:true do |f| %>
         <h6>声優名</h6>
         <%= f.text_field :name, :size=>"30×5" %>
         <div class="actions mt-1">
@@ -10,10 +10,12 @@
       <% end %>
     </div>
     <div class="col-8 mt-5">
-      <%= form_with url: search_user_voices_path, method: :get, local:true do |f| %>
-       <%= f.text_field 'keyword', placeholder: "検索する" %>
-        <%= f.submit :"検索" %>
-      <% end %>
+      <div class="mb-3">
+        <%= form_with url: search_admin_voices_path, method: :get, local:true do |f| %>
+         <%= f.text_field 'keyword', placeholder: "検索する" %>
+          <%= f.submit "検索" %>
+        <% end %>
+      </div>
       <h4>声優一覧</h4>
       <% @voices.each do |voice| %>
         <table>
