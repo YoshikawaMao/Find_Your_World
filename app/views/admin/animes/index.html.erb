@@ -2,28 +2,26 @@
     <div class="row">
       <div class="col-8">
         <h4>管理者側アニメ一覧</h4>
-        <table>
+        <table class="AAnimeTable">
           <% @animes.each do |anime| %>
             <tr>
               <td>
                 <%= link_to anime.title, admin_anime_path(anime.id) %>
-                &emsp;
               </td>
               <td>
-                <%= link_to "編集する", edit_admin_anime_path(anime.id), :class => "btn btn-outline-secondary btn-block" %>
+                <%= link_to "編集する", edit_admin_anime_path(anime.id), :class => "btn btn-outline-secondary" %>
               </td>
               <td>
-                <%= link_to "削除する", admin_anime_path(anime.id), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+                <%= link_to "削除する", admin_anime_path(anime.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
               </td>
               <td>
                 <div id="favorite-btn_<%= anime.id %>">
-                  &emsp;
                   <i class="fas fa-heart like-btn" ></i>
                   <%= anime.favorites.count %>
                   <%#= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
                 </div>
               </td>
-              <td>&emsp;<%= "#{anime.comments.count} コメント" %></td>
+              <td><%= "#{anime.comments.count} コメント" %></td>
             </tr>
           <% end %>
         </table>

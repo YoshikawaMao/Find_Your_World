@@ -11,7 +11,7 @@
           <table>
             <td>
             <%= Rinku.auto_link(url.address, :all, 'target="_blank"').html_safe %>
-            <%= link_to "削除する", admin_anime_url_path(url.id) , method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+            <%= link_to "削除する", admin_anime_url_path(url.id) , method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
             </td>
           </table>
         <% end %>
@@ -42,7 +42,7 @@
               <tr>
                 <td><%= comment.comment_content %></td>
                 <td>
-                  <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+                  <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
                 </td>
               </tr>
             <% end %>

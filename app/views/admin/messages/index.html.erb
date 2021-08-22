@@ -12,7 +12,7 @@
       <% Message.all.each do |message| %>
         <div class="my-4">
           <%= message.message_content %>
-          <%= link_to "削除する", admin_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+          <%= link_to "削除する", admin_message_path(message.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
         </div>
       <% end %>
     </div>

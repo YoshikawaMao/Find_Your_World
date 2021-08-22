@@ -14,7 +14,7 @@
             <%= message.message_content %>
           <!--コメントしたuserのみ削除可能-->
           <% if message.user == current_user %>
-            <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+            <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
           <% end %>
         </div>
       <% end %>

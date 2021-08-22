@@ -13,16 +13,16 @@
       <div class="col-7 mt-5">
         <h5>ジャンル一覧</h5>
         <% @genres.each do |genre| %>
-          <table>
+          <table class="GenreTable">
             <tr>
               <td>
                 <%= genre.name %>
               </td>
               <td>
-                <%= link_to "編集する", edit_admin_genre_path(genre), :class => "btn btn-outline-secondary btn-block" %>
+                <%= link_to "編集する", edit_admin_genre_path(genre), :class => "btn btn-outline-secondary" %>
               </td>
               <td>
-                <%= link_to "削除する", admin_genre_path(genre), method: :delete, :class => "btn btn-outline-secondary btn-block", data: {confirm: "削除しますか？"} %>
+                <%= link_to "削除する", admin_genre_path(genre), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
               </td>
             </tr>
           <% end %>

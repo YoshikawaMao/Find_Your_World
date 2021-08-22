@@ -3,7 +3,7 @@
     <div class="col text-center my-5">
       <h3><%= @voice.name %></h3>
       <%= link_to "編集する", edit_admin_voice_path(@voice.id), :class => "btn btn-outline-secondary" %>
-      <%= link_to "削除する", admin_voice_path(@voice.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+      <%= link_to "削除する", admin_voice_path(@voice.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
     </div>
   </div>
   <div class="row">
@@ -16,7 +16,7 @@
               <%= anime_voice.anime.title %>&emsp;
             </td>
             <td>
-              <%= link_to "削除する", user_voice_path(anime_voice.id), method: :delete, :class => "btn btn-outline-secondary", data: {confirm: "削除しますか？"} %>
+              <%= link_to "削除する", user_voice_path(anime_voice.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
             </td>
           </tr>
         </table>
