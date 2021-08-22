@@ -26,8 +26,10 @@ class Admin::AnimesController < ApplicationController
   def update
     @anime = Anime.find(params[:id])
     if @anime.update(anime_params)
+      flash[:notice] = "変更しました"
       redirect_to admin_anime_path(@anime.id)
     else
+      flash[:notice] = "変更失敗しました"
       render :edit
     end
   end
@@ -36,6 +38,7 @@ class Admin::AnimesController < ApplicationController
   def destroy
     @anime = Anime.find(params[:id])
     @anime.destroy
+    flash[:notice] = "削除しました"
     redirect_to admin_animes_path
   end
 

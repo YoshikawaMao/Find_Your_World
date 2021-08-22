@@ -8,8 +8,10 @@ class Admin::MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.admin_id = current_admin.id
     if @message.save
+      flash[:notice] = "投稿完了しました"
       redirect_to admin_messages_path
     else
+      flash[:notice] = "投稿失敗しました"
       render :index
     end
   end
@@ -17,6 +19,7 @@ class Admin::MessagesController < ApplicationController
   def destroy
     @message = Message.find(params[:id])
     @message.destroy
+    flash[:notice] = "削除しました"
     redirect_to admin_messages_path
   end
 

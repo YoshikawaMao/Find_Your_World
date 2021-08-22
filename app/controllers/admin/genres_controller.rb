@@ -7,9 +7,11 @@ class Admin::GenresController < ApplicationController
   def create
     @genre = Genre.new(genre_params)
     if @genre.save
+      flash[:notice] = "投稿完了しました"
       redirect_to admin_genres_path
     else
       @genres = Genre.all
+      flash[:notice] = "投稿失敗しました"
       render :index
     end
   end
@@ -21,8 +23,10 @@ class Admin::GenresController < ApplicationController
   def update
     @genre = Genre.find(params[:id])
     if @genre.update(genre_params)
+      flash[:notice] = "変更しました"
       redirect_to admin_genres_path
     else
+      flash[:notice] = "変更失敗しました"
       render :edit
     end
   end
@@ -30,6 +34,7 @@ class Admin::GenresController < ApplicationController
   def destroy
     @genre = Genre.find(params[:id])
     @genre.destroy
+    flash[:notice] = "削除しました"
     redirect_to admin_genres_path
   end
 

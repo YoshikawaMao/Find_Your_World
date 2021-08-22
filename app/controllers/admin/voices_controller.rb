@@ -14,9 +14,11 @@ class Admin::VoicesController < ApplicationController
   def create
     @voice = Voice.new(voice_params)
     if @voice.save
+      flash[:notice] = "投稿完了しました"
       redirect_to admin_voices_path
     else
       @voices = Voice.all
+      flash[:notice] = "投稿失敗しました"
       render :index
     end
   end
@@ -28,8 +30,10 @@ class Admin::VoicesController < ApplicationController
   def update
     @voice = Voice.find(params[:id])
     if @voice.update(voice_params)
+      flash[:notice] = "変更しました"
       redirect_to admin_voice_path(@voice.id)
     else
+      flash[:notice] = "変更失敗しました"
       render :edit
     end
   end
@@ -37,6 +41,7 @@ class Admin::VoicesController < ApplicationController
   def destroy
     @voice = Voice.find(params[:id])
     @voice.destroy
+    flash[:notice] = "削除しました"
     redirect_to admin_voices_path
   end
 
