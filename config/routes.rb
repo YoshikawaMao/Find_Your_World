@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   }
 
   namespace :admin do
-    resources :animes
-    resources :comments
+    resources :animes do
+      resources :comments, only: [:destroy]
+    end
     resources :voices do
       collection do
         get 'search'

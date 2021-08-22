@@ -34,19 +34,7 @@
       <div class="col-4 mt-5">
         <div class="comments">
           <p>コメント件数：<%= @comments.count %></p>
-          <table>
-            <% @comments.each do |comment| %>
-              <tr>
-                <td><%= comment.created_at.strftime('%Y/%m/%d') %></td>
-              </tr>
-              <tr>
-                <td><%= comment.comment_content %></td>
-                <td>
-                  <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
-                </td>
-              </tr>
-            <% end %>
-          </table>
+          <%= render 'admin/comments/commentlists', comments: @comments %>
         </div>
       </div>
       <div class="col-4 mt-5">
