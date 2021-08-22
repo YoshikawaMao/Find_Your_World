@@ -21,7 +21,7 @@
         <%= render 'genrelist' %>
       </div>
       <div class="col-8 mx-auto">
-        <table>
+        <table class="AnimeTable">
           <% @animes.each do |anime| %>
             <tr>
               <td>
@@ -29,11 +29,10 @@
               </td>
               <td>
                 <div id="favorite-btn_<%= anime.id %>">
-                  &emsp;
                   <%= render partial: 'user/favorites/favorite-btn', locals: { anime: anime} %>
                 </div>
               </td>
-              <td>&emsp;<%= "#{anime.comments.count} コメント" %></td>
+              <td><%= "#{anime.comments.count} コメント" %></td>
             </tr>
           <% end %>
         </table>

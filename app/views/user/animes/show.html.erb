@@ -58,9 +58,11 @@
         <div class="comments">
           <p>コメント件数：<%= @comments.count %></p>
 
-          <div id="comments_area">
-            <%= render partial: 'user/comments/index', locals: { comments: @comments } %>
-          </div>
+
+            <div id="comments_area">
+              <%= render partial: 'user/comments/index', locals: { comments: @comments } %>
+            </div>
+
 
         </div>
       </div>
