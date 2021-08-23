@@ -75,7 +75,7 @@
               <td>
                 <h6>
                   <!--声優名を押すと各声優のshowページに飛ぶ-->
-                  <%=link_to a.voice.name, user_voice_path(a.voice.id) %>
+                  <%=link_to a.voice.name, user_voice_path(a.voice.id), :class => "text-dark" %>
                   <%#= a.anime.title %>
                 </h6>
               </td>

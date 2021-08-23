@@ -31,7 +31,7 @@
           <% @animes.each do |anime| %>
             <tr>
               <td>
-                <%= link_to anime.title, user_anime_path(anime.id) %>
+                <%= link_to anime.title, user_anime_path(anime.id), :class => "text-dark" %>
               </td>
               <td>
                 <div id="favorite-btn_<%= anime.id %>">

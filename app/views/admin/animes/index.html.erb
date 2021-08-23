@@ -6,7 +6,7 @@
           <% @animes.each do |anime| %>
             <tr>
               <td>
-                <%= link_to anime.title, admin_anime_path(anime.id) %>
+                <%= link_to anime.title, admin_anime_path(anime.id), :class => "text-dark" %>
               </td>
               <td>
                 <%= link_to "編集する", edit_admin_anime_path(anime.id), :class => "btn btn-outline-secondary" %>

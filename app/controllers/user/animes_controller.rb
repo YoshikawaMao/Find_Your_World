@@ -26,6 +26,7 @@ class User::AnimesController < ApplicationController
       redirect_to user_animes_path
     else
       @animes = Anime.all
+      flash[:notice] = "投稿しました"
       render :index
     end
   end

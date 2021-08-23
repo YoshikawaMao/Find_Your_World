@@ -50,7 +50,7 @@
           <% @anime_voices.each do |a| %>
             <tr>
               <td>
-                <%=link_to a.voice.name, admin_voice_path(a.voice.id) %>
+                <%=link_to a.voice.name, admin_voice_path(a.voice.id), :class => "text-dark" %>
               </td>
             </tr>
           <% end %>

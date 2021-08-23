@@ -26,7 +26,7 @@
       <% @voices.each do |voice| %>
         <table>
           <td>
-            <%= link_to voice.name, admin_voice_path(voice.id) %>
+            <%= link_to voice.name, admin_voice_path(voice.id), :class => "text-dark" %>
           </td>
         </table>
       <% end %>

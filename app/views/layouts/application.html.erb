@@ -58,14 +58,17 @@
             <li class="nav-item">
               <%= link_to " 新規登録", new_user_registration_path, class: "btn btn-outline-primary" %>
             </li>
-            <li class="nav-item ml-2">
+            <li class="nav-item mx-2">
               <%= link_to " ログイン", new_user_session_path, class: "btn btn-outline-primary" %>
+            </li>
+            <li>
+              <%= link_to " 管理者ログイン", new_admin_session_path, class: "btn btn-outline-primary" %>
             </li>
           </ul>
         <% end %>
       </div>
     </header>
-    <div><%= flash[:notice] %></div>
+    <div class="flash ml-5"><%= flash[:notice] %></div>
     <%= yield %>
     <footer class="fixed-bottom text-right mx-3">
       Find_Your_Wrold
