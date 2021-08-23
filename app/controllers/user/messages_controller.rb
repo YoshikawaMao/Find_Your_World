@@ -8,8 +8,10 @@ class User::MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      flash.now[:notice] = "投稿しました"
       redirect_to user_messages_path
     else
+      flash.now[:notice] = "投稿できませんでした"
       render :index
     end
   end

@@ -15,6 +15,7 @@ class User::VoicesController < ApplicationController
     # user側からの声優の投稿は中間テーブルに入るようにするからモデル名はAnimeVoiceになる
     @voice = AnimeVoice.new(voice_params)
     if @voice.save
+      flash.now[:notice] = "追加しました"
       # createしたら元のviewに戻る
       redirect_back(fallback_location: root_path)
     else
@@ -22,10 +23,10 @@ class User::VoicesController < ApplicationController
       @voices = Voice.all
       @voice = Voice.new
       @anime_voices = AnimeVoice.where(anime_id: params[:id])
-      #@anime_voices = AnimeVoice.where(voice_id: params[:id])
       @comment = Comment.new
       @comments = Comment.where(anime_id: params[:id])
       @anime_urls =AnimeUrl.where(anime_id: params[:id])
+      flash.now[:notice] = "追加できませんでした"
       render "user/animes/show"
     end
   end

@@ -23,22 +23,15 @@ class User::AnimesController < ApplicationController
   def create
     @anime = Anime.new(anime_params)
     if @anime.save
-      flash[:notice] = "投稿しました"
+      flash.now[:notice] = "投稿しました"
       redirect_to user_animes_path
     else
       animes = Anime.includes(:favorited_users).sort {|a,b| b.favorited_users.size <=> a.favorited_users.size}
       @animes = Kaminari.paginate_array(animes).page(params[:page]).per(20)
       @genres = Genre.all
+      flash.now[:notice] = "投稿できませんでした"
       render :index
     end
-
-    # if true # @anime.save
-    #  flash[:notice] = "投稿しました"
-    #  redirect_to user_animes_path
-    # else
-    #  @animes = Anime.all
-    #   render :index
-    # end
   end
 
   private

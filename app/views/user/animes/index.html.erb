@@ -2,12 +2,12 @@
     <div class="row">
       <div class="col-4">
         <!--ログインしたユーザーのみ表示-->
-        <% if @anime.errors.any? %>
-          <%= @anime.errors.count %>件のエラーが発生しました
-          <% @anime.errors.full_messages.each do |message| %>
-            <%= message %>
-          <% end %>
-        <% end %>
+        <!--<%# if @anime.errors.any? %>-->
+        <!--  <%#= @anime.errors.count %>件のエラーが発生しました-->
+        <!--  <%# @anime.errors.full_messages.each do |message| %>-->
+        <!--    <%#= message %>-->
+        <!--  <%# end %>-->
+        <!--<%# end %>-->
         <% if user_signed_in? %>
           <%= form_with model: @anime, url: user_animes_path, local:true do |f| %>
             <%= f.label :"おすすめのアニメタイトル", class: "mr-5" %></th>
