@@ -18,7 +18,15 @@ class User::VoicesController < ApplicationController
       # createしたら元のviewに戻る
       redirect_back(fallback_location: root_path)
     else
-      render "animes/show"
+      @anime = Anime.find(params[:id])
+      @voices = Voice.all
+      @voice = Voice.new
+      @anime_voices = AnimeVoice.where(anime_id: params[:id])
+      #@anime_voices = AnimeVoice.where(voice_id: params[:id])
+      @comment = Comment.new
+      @comments = Comment.where(anime_id: params[:id])
+      @anime_urls =AnimeUrl.where(anime_id: params[:id])
+      render "user/animes/show"
     end
   end
 

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div class="col-6 text-center">
-        <h3><%= @anime.title %></h3>
+        <h2><%= @anime.title %></h2>
         <!--いいね機能テンプレート-->
         <div id="favorite-btn_<%= @anime.id %>">
           <%= render partial: 'user/favorites/favorite-btn', locals: { anime: @anime} %>
@@ -26,7 +26,7 @@
     <!--ログインしたユーザーのみ表示-->
     <% if user_signed_in? %>
       <div class="col-4 mt-5">
-        <%= form_with model: @voice, url: user_voices_path, local:true do |f| %>
+        <%= form_with model: @voice, url: user_voices_path(id: params[:id]), local:true do |f| %>
           <table>
             <tr>
               <td><%= f.label :"出演声優追加", class: "mr-5" %></td>
@@ -54,19 +54,20 @@
         </div>
       </div>
       <% end %>
-      <div class="col-4 mt-5">
+      <div class="col-5 mt-5">
         <div class="comments">
+          <h2>
+            <i class="far fa-star"></i>
+            おすすめポイント
+            <i class="far fa-star"></i>
+          </h2>
           <p>コメント件数：<%= @comments.count %></p>
-
-
-            <div id="comments_area">
-              <%= render partial: 'user/comments/index', locals: { comments: @comments } %>
-            </div>
-
-
+          <div id="comments_area">
+            <%= render partial: 'user/comments/index', locals: { comments: @comments } %>
+          </div>
         </div>
       </div>
-      <div class="col-4 mt-5">
+      <div class="col-3 mt-5">
         <h5>出演声優</h5>
         <table>
             <!--中間テーブルからアニメに紐づいた声優さんを持ってきている-->

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     end
     resources :messages
     resources :genres
-    resources :anime_urls
+    resources :anime_urls, only: [:index, :create, :destroy]
   end
 
   # get 'admins/animes/:genre_id' => 'admin/animes#index', as: :admin_animes_genre

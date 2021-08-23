@@ -1,11 +1,11 @@
- <table>
+ <table >
     <% comments.each do |comment| %>
       <tr>
         <td>
           <%= comment.created_at.strftime('%Y/%m/%d') %>
         </td>
       </tr>
-      <tr>
+      <tr style= "border-bottom: 2px solid #FFFFFF;">
         <td>
           <h4>
             <%= comment.comment_content %>
@@ -13,7 +13,7 @@
         </td>
         <td>
           <% if comment.user == current_user %>
-            <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
+            <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-danger btn-sm", data: {confirm: "削除しますか？"} %>
           <% end %>
         </td>
       </tr>
