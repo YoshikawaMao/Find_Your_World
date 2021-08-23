@@ -11,7 +11,6 @@ class Admin::GenresController < ApplicationController
       redirect_to admin_genres_path
     else
       @genres = Genre.all
-      flash[:notice] = "投稿失敗しました"
       render :index
     end
   end
@@ -26,7 +25,6 @@ class Admin::GenresController < ApplicationController
       flash[:notice] = "変更しました"
       redirect_to admin_genres_path
     else
-      flash[:notice] = "変更失敗しました"
       render :edit
     end
   end

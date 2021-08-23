@@ -18,7 +18,6 @@ class Admin::VoicesController < ApplicationController
       redirect_to admin_voices_path
     else
       @voices = Voice.all
-      flash[:notice] = "投稿失敗しました"
       render :index
     end
   end
@@ -33,7 +32,6 @@ class Admin::VoicesController < ApplicationController
       flash[:notice] = "変更しました"
       redirect_to admin_voice_path(@voice.id)
     else
-      flash[:notice] = "変更失敗しました"
       render :edit
     end
   end

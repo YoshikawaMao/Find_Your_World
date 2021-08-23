@@ -19,6 +19,12 @@
     </div>
     <div class="row">
       <div class="col-4 mt-5">
+        <% if @anime_url.errors.any? %>
+          <%= @anim_url.errors.count %>件のエラーが発生しました
+          <% @anime_url.errors.full_messages.each do |message| %>
+            <%= message %>
+          <% end %>
+        <% end %>
         <%= form_with model: @anime_url, url: admin_anime_urls_path, local:true do |f| %>
           <h6>アニメURL</h6>
           <%= f.text_field :address, :size=>"30×5" %>

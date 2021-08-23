@@ -11,7 +11,6 @@ class Admin::MessagesController < ApplicationController
       flash[:notice] = "投稿完了しました"
       redirect_to admin_messages_path
     else
-      flash[:notice] = "投稿失敗しました"
       render :index
     end
   end

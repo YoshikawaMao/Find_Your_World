@@ -1,6 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3 mx-auto">
+      <% if @anime.errors.any? %>
+        <%= @anime.errors.count %>件のエラーが発生しました
+        <% @anime.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>
+      <% end %>
       <h3>アニメタイトル編集</h3>
     </div>
   </div>

@@ -29,7 +29,6 @@ class Admin::AnimesController < ApplicationController
       flash[:notice] = "変更しました"
       redirect_to admin_anime_path(@anime.id)
     else
-      flash[:notice] = "変更失敗しました"
       render :edit
     end
   end

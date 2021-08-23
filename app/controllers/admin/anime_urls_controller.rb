@@ -6,7 +6,6 @@ class Admin::AnimeUrlsController < ApplicationController
       flash[:notice] = "投稿完了しました"
       redirect_back(fallback_location: root_path)
     else
-      flash[:notice] = "投稿失敗しました"
       redirect_back(fallback_location: root_path)
     end
   end

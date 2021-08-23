@@ -1,6 +1,9 @@
 class Message < ApplicationRecord
   belongs_to :user, optional: true
   belongs_to :admin, optional: true
+
+  validates :message_content, presence: true
+
   validate :id_present?
 
   def id_present?

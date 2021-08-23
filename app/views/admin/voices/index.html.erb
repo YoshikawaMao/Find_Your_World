@@ -1,6 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-4 mt-5">
+      <% if @voice.errors.any? %>
+          <%= @voice.errors.count %>件のエラーが発生しました
+          <% @voice.errors.full_messages.each do |message| %>
+            <%= message %>
+          <% end %>
+        <% end %>
       <%= form_with model: @voice, url:admin_voices_path, local:true do |f| %>
         <h6>声優名</h6>
         <%= f.text_field :name, :size=>"30×5" %>
