@@ -1,5 +1,6 @@
 class Admin::AnimeUrlsController < ApplicationController
 
+  # 戻るを押した時用のindexページ(中身はanimes/show)
   def index
     @anime = Anime.find(params[:id])
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
@@ -16,13 +17,14 @@ class Admin::AnimeUrlsController < ApplicationController
       redirect_back(fallback_location: root_path)
       # redirect_to admin_anime_path(params[:id])
     else
-      # redirect_back(fallback_location: root_path)
       @anime = Anime.find(params[:id])
       @anime_voices = AnimeVoice.where(anime_id: params[:id])
       @comments = Comment.where(anime_id: params[:id])
       @anime_urls =AnimeUrl.where(anime_id: params[:id])
       render "admin/animes/show"
       # redirect_back(fallback_location: root_path)
+      # createのsaveしない場合はrenderで書く！エラー文が表示されないため
+      # renderの時は飛ばすページの情報書くの忘れずに！
     end
   end
 
