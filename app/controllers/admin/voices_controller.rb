@@ -1,4 +1,5 @@
 class Admin::VoicesController < ApplicationController
+  before_action :authenticate_admin!
 
   def index
     @voices = Voice.all

@@ -1,4 +1,5 @@
 class User::FavoritesController < ApplicationController
+
   def create
     @anime = Anime.find(params[:anime_id])
     @favorite = current_user.favorites.new(anime_id: @anime.id)

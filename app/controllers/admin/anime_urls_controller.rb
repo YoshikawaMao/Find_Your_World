@@ -1,4 +1,5 @@
 class Admin::AnimeUrlsController < ApplicationController
+  before_action :authenticate_admin!
 
   # 戻るを押した時用のindexページ(中身はanimes/show)
   def index

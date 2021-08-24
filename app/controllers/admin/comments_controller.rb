@@ -1,4 +1,6 @@
 class Admin::CommentsController < ApplicationController
+  before_action :authenticate_admin!
+
    def destroy
     @anime = Anime.find(params[:anime_id])
     Comment.find_by(id: params[:id], anime_id: @anime.id).destroy
