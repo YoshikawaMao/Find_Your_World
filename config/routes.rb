@@ -12,16 +12,16 @@ Rails.application.routes.draw do
   }
 
   namespace :admin do
-    resources :animes do
+    resources :animes, only: [:index, :show, :edit, :update, :destroy] do
       resources :comments, only: [:destroy]
     end
-    resources :voices do
+    resources :voices, only: [:index, :show, :create, :edit, :update, :destroy] do
       collection do
         get 'search'
       end
     end
-    resources :messages
-    resources :genres
+    resources :messages, only: [:index, :create, :destroy]
+    resources :genres, only: [:index, :create, :edit, :update, :destroy]
     resources :anime_urls, only: [:index, :create, :destroy]
   end
 
@@ -35,17 +35,17 @@ Rails.application.routes.draw do
   }
 
   namespace :user do
-    resources :voices do
+    resources :voices, only: [:index, :show, :create, :destroy] do
       collection do
         get 'search'
       end
     end
-    resources :messages
-    resources :genres
-    resources :animes do
+    resources :messages, only: [:index, :create, :destroy]
+    resources :animes, only: [:index, :show, :create] do
       resource :favorites, only: [:create, :destroy]
       resources :comments, only: [:create, :destroy]
     end
     get '/search', to: 'searches#search'
+    # resources :genres
   end
 end

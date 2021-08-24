@@ -15,7 +15,7 @@ class User::VoicesController < ApplicationController
     # user側からの声優の投稿は中間テーブルに入るようにするからモデル名はAnimeVoiceになる
     @voice = AnimeVoice.new(voice_params)
     if @voice.save
-      flash.now[:notice] = "追加しました"
+      flash[:notice] = "追加しました"
       # createしたら元のviewに戻る
       redirect_back(fallback_location: root_path)
     else
