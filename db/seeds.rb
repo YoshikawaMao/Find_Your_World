@@ -10,6 +10,8 @@ Admin.create(name: 'example', email: 'example@example.com', password: 'passw@rd'
 
 user = User.create(name: 'example', email: 'example@example.com', password: 'passw@rd')
 
+
+# ここに声優名とジャンルと出演作品追加していく
 voices = [
   {name: '神谷浩史', anime: [
     {genre: 'a', name: 'Bake'},

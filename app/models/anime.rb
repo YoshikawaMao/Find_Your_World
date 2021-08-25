@@ -1,9 +1,11 @@
 class Anime < ApplicationRecord
   has_many :anime_voices, dependent: :destroy
+  # ↑ここにdependent::destroy書くことで中間テーブルからもアニメ消すことできる
   belongs_to :user
   belongs_to :genre
 
   has_many :anime_urls, dependent: :destroy
+  # アニメが削除されたらurlも消える
 
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
