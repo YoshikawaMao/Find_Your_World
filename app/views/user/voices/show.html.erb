@@ -10,7 +10,7 @@
       <% @anime_voices.each do |anime_voice| %>
         <table align=center >
           <td>
-            <%= anime_voice.anime.title %>
+            <%=link_to anime_voice.anime.title, user_anime_path(anime_voice.anime.id), :class => "text-dark" %>
           </td>
         </table>
       <% end %>

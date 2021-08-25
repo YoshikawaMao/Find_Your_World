@@ -55,7 +55,7 @@
         <div class="new-comment mt-5">
           <!--アニメに結びついたコメントのため２つ必要-->
           <%= form_with(model:[@anime,@comment], url: user_anime_comments_path(anime_id: @anime.id) ) do |f| %>
-            <%= f.text_area :comment_content, rows:'5',placeholder: "コメントをここに" %>
+            <%= f.text_area :comment_content, rows:'5',placeholder: "おすすめポイントをここに" %>
             <%= f.submit "送信する" %>
           <% end %>
         </div>

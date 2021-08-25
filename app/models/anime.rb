@@ -1,14 +1,14 @@
 class Anime < ApplicationRecord
-  has_many :anime_voices
+  has_many :anime_voices, dependent: :destroy
   belongs_to :user
   belongs_to :genre
 
-  has_many :anime_urls
+  has_many :anime_urls, dependent: :destroy
 
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
-  has_many :favorited_users, through: :favorites, source: :user
+  has_many :favorited_users, through: :favorites, source: :user, dependent: :destroy
 
   validates :title, presence: true
 
