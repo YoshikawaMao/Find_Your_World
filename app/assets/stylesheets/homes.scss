@@ -5,7 +5,7 @@
 .top {
 	width: 100%;
 	height: 80vh;
-	background:linear-gradient(45deg, #080330,#101366,#ffd6fe);/*グラデーションを定義*/
+	background:linear-gradient(45deg, #080330,#020E34,#ffd6fe);/*グラデーションを定義*/
 	background-size: 200% 200%;/*サイズを大きくひきのばす*/
 	animation: bggradient 20s ease infinite;
 }
@@ -22,6 +22,7 @@
 	}
 }
 
+// #101366
 // #ed1cae
 
 .fadeUp{
@@ -42,3 +43,4 @@ opacity:0;
 	transform: translateY(0);
   }
 }
+

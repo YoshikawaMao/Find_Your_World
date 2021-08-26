@@ -23,7 +23,7 @@ voices = [
   ]},
   {name: '井上和彦', anime: [
     {genre: 'b', name: 'Natsume'},
-    {genre: 'a', name:'Naruto'}
+    {genre: 'a', name: 'Naruto'}
   ]}
 ]
 
