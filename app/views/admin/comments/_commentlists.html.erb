@@ -3,8 +3,14 @@
     <tr>
       <td><%= comment.created_at.strftime('%Y/%m/%d') %></td>
     </tr>
-    <tr style= "border-bottom: 2px solid #FFFFFF;">
-      <td><%= comment.comment_content %></td>
+    <tr>
+      <td>
+        <div class="box1">
+          <h4>
+            <%= comment.comment_content %>
+          </h4>
+        </div>
+        </td>
       <td>
         <%= link_to "削除する", admin_anime_comment_path(comment.anime, comment) , method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
       </td>

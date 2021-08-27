@@ -17,7 +17,9 @@
     <div class="col-7 mt-5">
       <% Message.all.each do |message| %>
         <div class="my-4">
-          <%= message.message_content %>
+          <div style="display:inline-block; background:#fcfcff; padding:15px; border:1px solid #555555; border-radius:10px; word-break:break-all;">
+            <%= message.message_content %>
+          </div>
           <%= link_to "削除する", admin_message_path(message.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
         </div>
       <% end %>

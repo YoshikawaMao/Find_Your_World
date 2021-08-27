@@ -17,7 +17,9 @@
     <div class="col-7 mt-5">
       <% Message.all.each do |message| %>
         <div class="my-4">
+          <div style="display:inline-block; background:#fcfcff; padding:15px; border:1px solid #555555; border-radius:10px; word-break:break-all;">
             <%= message.message_content %>
+          </div>
           <!--コメントしたuserのみ削除可能-->
           <% if message.user == current_user %>
             <%= link_to "削除する", user_message_path(message.id), method: :delete, :class => "btn btn-outline-danger btn-sm", data: {confirm: "削除しますか？"} %>
