@@ -26,12 +26,6 @@
     <!--ログインしたユーザーのみ表示-->
     <% if user_signed_in? %>
       <div class="col-4 mt-5">
-        <!--<%# if @voice.errors.any? %>-->
-        <!--  <%#= @voice.errors.count %>件のエラーが発生しました-->
-        <!--  <%# @voice.errors.full_messages.each do |message| %>-->
-        <!--    <%#= message %>-->
-        <!--  <%# end %>-->
-        <!--<%# end %>-->
         <%= form_with model: @voice, url: user_voices_path(id: params[:id]), local:true do |f| %>
         <!--urlの後に()に持っていって欲しいidを書くとurlに入れて持っていってくれる-->
           <table>
@@ -58,6 +52,9 @@
             <%= f.text_area :comment_content, rows:'5',placeholder: "おすすめポイントをここに" %>
             <%= f.submit "送信する" %>
           <% end %>
+        </div>
+        <div>
+          <%= link_to "アニメ一覧に戻る", user_animes_path, :class => "text-info" %>
         </div>
       </div>
       <% end %>
