@@ -64,4 +64,3 @@ RSpec.configure do |config|
 
   require 'support/factory_bot'
 end
-

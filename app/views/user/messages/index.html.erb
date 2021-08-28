@@ -2,12 +2,6 @@
   <div class="row">
     <h3 class="my-4">ジャンル・声優追加希望などございましたら こちらにメッセージをお願いします。</h3>
     <div class="col-5 mt-5">
-      <!--<%# if @message.errors.any? %>-->
-      <!--  <%#= @message.errors.count %>件のエラーが発生しました-->
-      <!--  <%# @message.errors.full_messages.each do |message| %>-->
-      <!--    <%#= message %>-->
-      <!--  <%# end %>-->
-      <!--<%# end %>-->
       <%= form_with model: @message, url:user_messages_path, local:true do |f| %>
       <h4>メッセージ</h4>
       <%= f.text_area :message_content %>

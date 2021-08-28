@@ -1,9 +1,7 @@
 class User::AnimesController < ApplicationController
-
   def index
-    animes = Anime.includes(:favorited_users).sort {|a,b| b.favorited_users.size <=> a.favorited_users.size}
+    animes = Anime.includes(:favorited_users).sort { |a, b| b.favorited_users.size <=> a.favorited_users.size }
     @animes = Kaminari.paginate_array(animes).page(params[:page]).per(18)
-    # @animes = Anime.all.page(params[:page]).per(15)
     @anime = Anime.new
     @genres = Genre.all
   end
@@ -13,20 +11,20 @@ class User::AnimesController < ApplicationController
     @voices = Voice.all
     @voice = Voice.new
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
-    #@anime_voices = AnimeVoice.where(voice_id: params[:id])
+    # @anime_voices = AnimeVoice.where(voice_id: params[:id])
     @comment = Comment.new
     @comments = Comment.where(anime_id: params[:id])
-    @anime_urls =AnimeUrl.where(anime_id: params[:id])
+    @anime_urls = AnimeUrl.where(anime_id: params[:id])
   end
 
-  #アニメのタイトル
+  # アニメのタイトル
   def create
     @anime = Anime.new(anime_params)
     if @anime.save
       flash[:notice] = "投稿しました"
       redirect_to user_animes_path
     else
-      animes = Anime.includes(:favorited_users).sort {|a,b| b.favorited_users.size <=> a.favorited_users.size}
+      animes = Anime.includes(:favorited_users).sort { |a, b| b.favorited_users.size <=> a.favorited_users.size }
       @animes = Kaminari.paginate_array(animes).page(params[:page]).per(20)
       @genres = Genre.all
       flash.now[:notice] = "投稿できませんでした"

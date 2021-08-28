@@ -1,12 +1,10 @@
 class User::VoicesController < ApplicationController
-
   def index
     @voices = Voice.all
   end
 
   def show
     @voice = Voice.find(params[:id])
-    # @anime_voices = AnimeVoice.where(voice_id: params[:id])
     # findは１件、whereは複数件探してデータを持ってこられる
     @anime_voices = AnimeVoice.where(voice_id: @voice.id)
   end
@@ -25,7 +23,7 @@ class User::VoicesController < ApplicationController
       @anime_voices = AnimeVoice.where(anime_id: params[:id])
       @comment = Comment.new
       @comments = Comment.where(anime_id: params[:id])
-      @anime_urls =AnimeUrl.where(anime_id: params[:id])
+      @anime_urls = AnimeUrl.where(anime_id: params[:id])
       flash.now[:notice] = "追加できませんでした"
       render "user/animes/show"
     end
@@ -42,8 +40,8 @@ class User::VoicesController < ApplicationController
   end
 
   private
-    def voice_params
-      params.require(:voice).permit(:voice_id, :anime_id)
 
-    end
+  def voice_params
+    params.require(:voice).permit(:voice_id, :anime_id)
+  end
 end

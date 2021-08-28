@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-
- root to: 'homes#top'
- get "top" => "homes#top"
+  root to: 'homes#top'
+  get "top" => "homes#top"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # 管理者側
   # devise_for :admins
   devise_for :admins, controllers: {
     sessions: 'admins/sessions',
-    registrations: 'admins/registrations'
+    registrations: 'admins/registrations',
   }
 
   namespace :admin do
@@ -31,7 +30,7 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
   }
 
   namespace :user do

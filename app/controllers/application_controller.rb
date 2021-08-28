@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
-
   before_action :configure_permitted_parameters, if: :devise_controller?
 
- #ログイン後の遷移画面(管理者&user)
+  # ログイン後の遷移画面(管理者&user)
   def after_sign_in_path_for(resource)
     case resource
     when Admin
@@ -12,7 +11,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  #ログアウト後の遷移画面(管理者&user)
+  # ログアウト後の遷移画面(管理者&user)
   def after_sign_out_path_for(resource)
     if resource == :admin
       new_admin_session_path
@@ -26,8 +25,6 @@ class ApplicationController < ActionController::Base
     #   root_path
     # end
   end
-
-
 
   protected
 

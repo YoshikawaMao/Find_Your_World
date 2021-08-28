@@ -1,5 +1,4 @@
 class User::CommentsController < ApplicationController
-
   def create
     # paramusは箱　リクエストの中身をparamsに入れている
     anime_id = params[:anime_id]

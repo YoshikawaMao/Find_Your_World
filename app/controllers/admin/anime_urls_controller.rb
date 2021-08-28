@@ -7,7 +7,7 @@ class Admin::AnimeUrlsController < ApplicationController
     @anime_voices = AnimeVoice.where(anime_id: params[:id])
     @comments = Comment.where(anime_id: params[:id])
     @anime_url = AnimeUrl.new
-    @anime_urls =AnimeUrl.where(anime_id: params[:id])
+    @anime_urls = AnimeUrl.where(anime_id: params[:id])
     render "admin/animes/show"
   end
 
@@ -21,7 +21,7 @@ class Admin::AnimeUrlsController < ApplicationController
       @anime = Anime.find(params[:id])
       @anime_voices = AnimeVoice.where(anime_id: params[:id])
       @comments = Comment.where(anime_id: params[:id])
-      @anime_urls =AnimeUrl.where(anime_id: params[:id])
+      @anime_urls = AnimeUrl.where(anime_id: params[:id])
       render "admin/animes/show"
       # redirect_back(fallback_location: root_path)
       # createのsaveしない場合はrenderで書く！エラー文が表示されないため

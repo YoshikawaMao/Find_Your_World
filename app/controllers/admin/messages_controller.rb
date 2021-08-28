@@ -30,5 +30,4 @@ class Admin::MessagesController < ApplicationController
     # .merge(admin_id: current_admin.id)　誰が書き込みしたか入れないとエラーが出るadmin_id入れるべき？
     # 今回はcreateで定義する方にしました
   end
-
 end

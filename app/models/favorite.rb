@@ -4,4 +4,3 @@ class Favorite < ApplicationRecord
 
   validates_uniqueness_of :anime_id, scope: :user_id
 end
-

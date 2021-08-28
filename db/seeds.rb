@@ -14,72 +14,24 @@ user = User.create(name: 'example', email: 'example@example.com', password: 'pas
 # ここに声優名とジャンルと出演作品追加していく
 voices = [
   {name: '神谷浩史', anime: [
-    {genre: 'a', name: '化物語'},
-    {genre: 'b', name: '夏目友人帳'}
+    {genre: 'バトルアニメ', name: '進撃の巨人'},
+    {genre: '妖怪アニメ', name: '夏目友人帳'}
   ]},
   {name: '小野大輔', anime: [
-    {genre: '', name: '進撃の巨人'},
-    {genre: '', name: '黒執事'}
+    {genre: 'バトルアニメ', name: '進撃の巨人'},
+    {genre: 'スポーツアニメ', name: '黒子のバスケ'}
   ]},
   {name: '井上和彦', anime: [
-    {genre: '', name: '夏目友人帳'},
-    {genre: '', name: 'NARUTO -ナルト-'}
+    {genre: '妖怪アニメ', name: '夏目友人帳'},
+    {genre: 'バトルアニメ', name: 'NARUTO -ナルト-'}
   ]},
   {name: '下野紘', anime: [
-    {genre: '', name: '鬼滅の刃'},
-    {genre: '', name: 'うたの☆プリンスさまっ♪'}
-  ]},
-  {name: '梶裕貴', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '中村悠一', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '杉田智和', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '内田雄馬', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '内田真礼', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '寺島拓篤', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '宮野真守', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '鬼頭明里', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '松岡禎丞', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '櫻井孝宏', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '逢坂良太', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
-  ]},
-  {name: '島﨑信長', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
+    {genre: 'バトルアニメ', name: '鬼滅の刃'},
+    {genre: 'アイドルアニメ', name: 'うたの☆プリンスさまっ♪'}
   ]},
   {name: '花江夏樹', anime: [
-    {genre: '', name: ''},
-    {genre: '', name: ''}
+    {genre: 'バトルアニメ', name: '鬼滅の刃'},
+    {genre: 'バトルアニメ', name: '東京喰種トーキョーグール'}
   ]},
 ]
 
