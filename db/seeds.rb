@@ -32,7 +32,7 @@ voices = [
   {name: '花江夏樹', anime: [
     {genre: 'バトルアニメ', name: '鬼滅の刃'},
     {genre: 'バトルアニメ', name: '東京喰種トーキョーグール'}
-  ]},
+  ]}
 ]
 
 # voice.each do |name|
