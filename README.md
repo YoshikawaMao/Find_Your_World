@@ -42,7 +42,7 @@ https://docs.google.com/spreadsheets/d/1_z_BxtSJAIWwEc95fF6nWlTw8XWjfhhovEwaqHwM
 アプリケーション詳細設計.
 https://docs.google.com/spreadsheets/d/1vdzfdNMN1N5NN2ofO49KgnAI9YHCM7RyM3vvxFyyliM/edit?usp=sharing
 
-## チャレンジ要素一覧
+## チャレンジ要素一覧.
 https://docs.google.com/spreadsheets/d/1o6KYcX9ZHEsRD9DTR2hdz02vBWclHHXMnvdrNKQQ2BE/edit?usp=sharing
 
 ## 開発環境
