@@ -1,8 +1,8 @@
 # Find Your World
 
 ## サイト概要
-アニメのオススメポイントを見たり、投稿することができるサイトです。
-また、作品の出演声優を知れたり、声優ごとに出演作品も見られるようになっております。
+アニメのオススメポイントを見たり、投稿することができるサイトです。<br>
+また、作品の出演声優を知れたり、声優ごとに出演作品も見られるようになっております。<br>
 アニメが好きな方にはアニメのオススメポイントを投稿することで推しアニメを盛り上げて頂き、また、アニメを見てみたいけど何を見たらいいか分からないという方には、オススメポイントを見て見たいと思うアニメに出会う場として活用して頂きたいです。
 
 ### サイトテーマ
@@ -33,16 +33,16 @@
 - 見たいアニメが決まっていない時
 
 ## 設計書
-ER図・遷移図.
+ER図・遷移図
 https://drive.google.com/file/d/1RC5Cawd7KEZxL-R3xXLoOZza1Ah2mGow/view?usp=sharing
 
-テーブル提議書.
+テーブル提議書
 https://docs.google.com/spreadsheets/d/1_z_BxtSJAIWwEc95fF6nWlTw8XWjfhhovEwaqHwMMLc/edit?usp=sharing
 
-アプリケーション詳細設計.
+アプリケーション詳細設計
 https://docs.google.com/spreadsheets/d/1vdzfdNMN1N5NN2ofO49KgnAI9YHCM7RyM3vvxFyyliM/edit?usp=sharing
 
-## チャレンジ要素一覧.
+## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1o6KYcX9ZHEsRD9DTR2hdz02vBWclHHXMnvdrNKQQ2BE/edit?usp=sharing
 
 ## 開発環境
