@@ -12,7 +12,7 @@
         </div>
         </td>
       <td>
-        <%= link_to "削除する", admin_anime_comment_path(comment.anime, comment) , method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
+        <%= link_to "削除", admin_anime_comment_path(comment.anime, comment) , method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
       </td>
     </tr>
   <% end %>

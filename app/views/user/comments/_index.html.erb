@@ -15,7 +15,7 @@
         </td>
         <td>
           <% if comment.user == current_user %>
-            <%= link_to "削除する", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-danger btn-sm", data: {confirm: "削除しますか？"} %>
+            <%= link_to "削除", user_anime_comment_path(comment.anime, comment) , method: :delete, remote: true, :class => "btn btn-outline-danger btn-sm", data: {confirm: "削除しますか？"} %>
           <% end %>
         </td>
       </tr>
